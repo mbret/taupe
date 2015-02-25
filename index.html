@@ -4,6 +4,7 @@
 	<meta charset="utf-8" />
 	<title>jInvertScroll Demo Page</title>
     <link rel="stylesheet" href="css/example.css" />
+    <link rel="stylesheet" href="css/taupe.css" />
 </head>
 <body>
 
@@ -24,121 +25,18 @@
     <div class="caca1">
         
     </div>
-    
-    <script type="text/javascript" src="libs/jquery.min.js"></script>
+
+    <canvas id="compare" class="scrollFace" width="320" height="240" style="display:none"></canvas>
+    <video id="vid" class="scrollFace" autoplay loop width="320" height="240"></video>
+    <canvas id="overlay" class="scrollFace" width="320" height="240"></canvas>
+    <canvas id="debug" class="scrollFace" width="320" height="240"></canvas>
+    <script type="text/javascript" src="dist/js/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/js/headtrackr.min.js"></script>
+    <script type="text/javascript" src="dist/js/jquery.jInvertScroll.min.js"></script>
     <script type="text/javascript" src="libs/lodash.js"></script>
-    <script type="text/javascript" src="libs/taupe.js"></script>
+    <script type="text/javascript" src="libs/mole.js"></script>
     <script type="text/javascript" src="libs/ground.js"></script>
-    <script type="text/javascript" src="dist/js/jquery.jInvertScroll.js"></script>
-    <script type="text/javascript">
-
-        var nbScenes = 5;
-        var scenesNames = ['scene a', 'scene b', 'scene c', 'scene d', 'offset'];
-        var scenes = [
-            {
-                name : scenesNames[0],
-                bg: 'scenea.jpg',
-                range: [0, 0.25]
-            },
-            {
-                name : scenesNames[1],
-                bg: 'scenea.jpg',
-                range: [0.25, 0.5]
-            },
-            {
-                name : scenesNames[2],
-                bg: 'scenea.jpg',
-                range: [0.5, 0.75]
-            },
-            {
-                name : scenesNames[3],
-                bg: 'scenea.jpg',
-                range: [0.75, 1]
-            },
-            {
-                name : scenesNames[4],
-                bg: 'scenea.jpg',
-                range: [1, 1]
-            },
-        ];
-        var animations = [
-            {
-                time: 0.01,
-                name: 'animation 1',
-                event: function(){
-                    console.log('animation 1');
-                }
-            },
-            {
-                time: 0.01,
-                name: 'animation 1',
-                event: function(){
-                    console.log('animation 2');
-                }
-            },
-            {
-                time: 0.01,
-                name: 'animation 1',
-                event: function(){
-                    console.log('animation 3');
-                }
-            },
-            {
-                time: 0.01,
-                name: 'animation 1',
-                event: function(){
-                    console.log('animation 4');
-                }
-            },
-            {
-                time: 0.01,
-                name: 'animation 1',
-                event: function(){
-                    console.log('animation 5');
-                }
-            } 
-        ];
-        var taupe = new Taupe();
-        var ground = new Ground($('#ground'), scenes);
-        
-        // Prepare ground
-        // add all scene with correct width
-        ground.prepare();
-
-        /**
-         * Throw animation
-         * @param percent
-         */
-        function miscAnimate(percent){
-            
-            var n = parseFloat(percent.toFixed(2));
-            _.forEach(animations, function(animation, index){
-//                console.log(n, animation);
-                if(animation.time === n){
-                    animation.event();
-                }
-            });
-        }
-        
-        (function($){
-            $.jInvertScroll(['.scroll'],{
-                height: 60000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-                onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-                    console.log("current perent is " + percent);
-                    console.log("current scene is " + ground.currentScene);
-                    
-                    // Set current scene
-                    ground.updateScene(parseFloat(percent));
-
-                    // move taupe
-                    taupe.move(parseFloat(percent));
-
-                    // throw animation
-                    miscAnimate(parseFloat(percent));
-                }
-            });
-        }(jQuery));
-        
-    </script>
+    <script type="text/javascript" src="libs/index.js"></script>
+    <script type="text/javascript" src="libs/headMoves.js"></script>
 </body>
 </html>
