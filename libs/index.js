@@ -5,11 +5,14 @@
     var animationTimeout = 2000; // 2s
     var animations = [
         {
-            range: [1, 1],
+            range: [0.01, 0.012],
             name: 'animation 1',
-            timeout: 1000, // custom timeout
+            timeout: 2000, // custom timeout
             event: function(){
                 console.log('animation 1');
+            },
+            callback: function(){
+                console.log('callback animation 1')
             }
         },
         {
@@ -27,7 +30,11 @@
         },
         {
             range: [0.025, 0.5],
-            css: 'walk'
+            css: 'walk',
+            animate: {
+                behavior: { left: '10%' },
+                timeout: 500
+            }
         },
         {
             range: [0.10, 0.20],
@@ -93,14 +100,22 @@
         _.forEach(animations, function(animation, index){
             if(percent >= animation.range[0] && percent <= animation.range[1]){
 
-                var timeout = (animation.timeout) ? animation.timeout : animationTimeout;
-                Utils.pauseScroll();
-                animation.event();
-                setTimeout(function(){
-                    Utils.resumeScroll();
-                }, timeout);
-                
-                return;
+                if(animation.played && animation.played === true){
+                    return;
+                }
+                else{
+                    var timeout = (animation.timeout) ? animation.timeout : animationTimeout;
+                    Utils.pauseScroll();
+                    animation.event();
+                    animation.played = true;
+                    setTimeout(function(){
+                        Utils.resumeScroll();
+                        if(animation.callback){
+                            animation.callback();
+                        }
+                    }, timeout);
+                    return;
+                }
             }
         });
     }
