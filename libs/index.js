@@ -123,7 +123,7 @@
     var scrollHandler = function(e) {
         e.preventDefault();
         e.stopPropagation();
-    }
+    };
     window.Utils = {
         pauseScroll: function(){
             $('body').bind('wheel', scrollHandler);

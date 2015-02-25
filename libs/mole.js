@@ -44,7 +44,7 @@
                     });
                 }
                 
-                if(positionToAffect.left && (positionToAffect.left + 'px') !== $elem.css('left')){
+                //if(positionToAffect.left && (positionToAffect.left + 'px') !== $elem.css('left')){
                     //Utils.pauseScroll();
                     //$elem.animate({
                     //    left: positionToAffect.left
@@ -52,7 +52,7 @@
                     //    //that.isMoving = false;
                     //    Utils.resumeScroll();
                     //});
-                }
+                //}
 
             }
         }

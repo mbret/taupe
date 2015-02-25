@@ -79,7 +79,7 @@ h1
 .scene{
     /*height:853px;*/
     width: 100%; 
-    border:1px solid green; 
+    border-top:2px solid green;
     display: inline-block;
     background-size: cover;
 }
