@@ -59,7 +59,10 @@ h1
 
 }
 .walk{
-  background: url('../images/walk.png') no-repeat top left; width: 371px; height: 381px; animation: play 1.8s steps(4) infinite;
+    background: url('../images/walk.png') no-repeat top left;
+    width: 371px; 
+    height: 381px;
+    animation: play 1.8s steps(4) infinite;
 }
 @keyframes play {
    100% { background-position: -1463px; }

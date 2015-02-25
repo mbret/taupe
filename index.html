@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>jInvertScroll Demo Page</title>
+    <link rel="stylesheet" href="css/example.css" />
+</head>
+<body>
+
+    <div class="horizon scroll">
+        <img src="images/horizon.png" alt="" />
+    </div>
+    
+    <div class="front scroll">
+        <!--<img src="images/chemin.png" alt="" />-->
+        <div style="height:200px; width: 1903px; border:1px solid green; display: inline-block;"></div>
+        <div style="height:200px;width: 1903px; border:1px solid red;display: inline-block;"></div>
+        <div style="height:200px;width: 1903px; border:1px solid blue;display: inline-block;"></div>
+    </div>
+    
+    <div class="front perso walk" id="taupe">
+        
+    </div>
+    
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/lodash.js"></script>
+    <script type="text/javascript" src="libs/taupe.js"></script>
+    <script type="text/javascript" src="dist/js/jquery.jInvertScroll.js"></script>
+    <script type="text/javascript">
+
+        var taupe = new Taupe();
+        
+        var scenes = {
+            start: [0, 0.2],
+            2: [0.2, 0.4],
+            3: [0.4, 0.6],
+            4: [0.6, 1]
+        }
+        
+        var event = new Event('start');
+        var event = new Event('1');
+        var event = new Event('2');
+        var event = new Event('3');
+
+        // Listen for the event.
+        window.addEventListener('in-scene-', function (e) {
+
+        }, false);
+        
+        (function($) {
+            $.jInvertScroll(['.scroll'],{
+                height: 60000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+                onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                    console.log(percent);
+                    var sceneName = inScene(parseFloat(percent));
+                    console.log(sceneName);
+                    taupe.move(parseFloat(percent));
+                }
+            });
+        }(jQuery));
+        
+        
+        /**
+         * Give the actual scene name.
+         * @param percent
+         * @returns {*}
+         */
+        function inScene(percent){
+            var name = "";
+            _.forEach(scenes, function(scene, key){
+                if(percent >= scene[0] && percent <= scene[1]){
+                    name = key;
+                }
+            });
+            return name;
+        }
+    
+        
+    </script>
+</body>
+</html>
