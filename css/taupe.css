@@ -1,3 +1,6 @@
+.invisible{
+    background: none;
+}
 .walk{
     background: url('../images/walk.png') no-repeat top left;
     width: 371px;

@@ -11,7 +11,11 @@
             var totalWidth = 50;
             var windowWidth = $(window).width();
             _.forEach(scenes, function(scene, index){
-                $elem.append('<div class="scene" id="' + scene.name + '" ></div>');
+                $elem.append('<img class="scene" data-bg="' + scene.bg + '" src="' + scene.bg + '" id="' + scene.name + '" ></img>');
+                //console.log($("[data-bg='" + scene.bg + "'"));
+                var $appended = $("[data-bg='" + scene.bg + "'");
+                //console.log($appended.data('bg'));
+                //$appended.css('background-image', 'url(' + $appended.data('bg') + ')');
                 totalWidth += windowWidth;
             });
             

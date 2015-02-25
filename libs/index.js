@@ -1,76 +1,32 @@
 (function(){
    'use strict';
     
-    var nbScenes = 5;
-    var scenesNames = ['scene a', 'scene b', 'scene c', 'scene d', 'offset'];
-    var scenes = [
-        {
-            name : scenesNames[0],
-            bg: 'scenea.jpg',
-            range: [0, 0.25]
-        },
-        {
-            name : scenesNames[1],
-            bg: 'scenea.jpg',
-            range: [0.25, 0.5]
-        },
-        {
-            name : scenesNames[2],
-            bg: 'scenea.jpg',
-            range: [0.5, 0.75]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'scenea.jpg',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[4],
-            bg: 'scenea.jpg',
-            range: [1, 1]
-        },
-    ];
+    // default timeout
+    var animationTimeout = 2000; // 2s
     var animations = [
         {
-            time: 0.01,
+            range: [1, 1],
             name: 'animation 1',
+            timeout: 1000, // custom timeout
             event: function(){
                 console.log('animation 1');
             }
         },
         {
-            time: 0.01,
-            name: 'animation 1',
+            range: [1, 1],
+            name: 'animation 2',
             event: function(){
                 console.log('animation 2');
             }
         },
-        {
-            time: 0.01,
-            name: 'animation 1',
-            event: function(){
-                console.log('animation 3');
-            }
-        },
-        {
-            time: 0.01,
-            name: 'animation 1',
-            event: function(){
-                console.log('animation 4');
-            }
-        },
-        {
-            time: 0.01,
-            name: 'animation 1',
-            event: function(){
-                console.log('animation 5');
-            }
-        }
     ];
     var moleBehavior = [
         {
-            range: [0, 0.10],
-            left: '0%',
+            range: [0, 0.025],
+            css: 'invisible'
+        },
+        {
+            range: [0.025, 0.5],
             css: 'walk'
         },
         {
@@ -132,13 +88,34 @@
      * @param percent
      */
     function miscAnimate(percent){
-
-        var n = parseFloat(percent.toFixed(2));
+        console.log(percent);
+        //var n = parseFloat(percent.toFixed(2));
         _.forEach(animations, function(animation, index){
-            if(animation.time === n){
+            if(percent >= animation.range[0] && percent <= animation.range[1]){
+
+                var timeout = (animation.timeout) ? animation.timeout : animationTimeout;
+                Utils.pauseScroll();
                 animation.event();
+                setTimeout(function(){
+                    Utils.resumeScroll();
+                }, timeout);
+                
+                return;
             }
         });
+    }
+
+    var scrollHandler = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    window.Utils = {
+        pauseScroll: function(){
+            $('body').bind('wheel', scrollHandler);
+        },
+        resumeScroll: function(){
+            $('body').unbind('wheel', scrollHandler);
+        }
     }
     
 })();
