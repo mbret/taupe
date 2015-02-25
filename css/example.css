@@ -63,9 +63,14 @@ h1
     width: 371px; 
     height: 381px;
     animation: play 1.8s steps(4) infinite;
+    -webkit-animation: play 1.8s steps(4) infinite;
 }
 @keyframes play {
    100% { background-position: -1463px; }
+}
+@-webkit-keyframes play {
+  from { background-position: 0 0; }
+  to { background-position: -1463px 0; }
 }
 
 .scene{
@@ -74,3 +79,17 @@ h1
     border:1px solid green; 
     display: inline-block;
 }
+.crotte1{
+  background: url('sprite.png') no-repeat top left; width: 221px; height: 897px;
+}
+@keyframes playcrotte1 {
+   100% { background-position: 0 -8153px; }
+}
+@-webkit-keyframes playcrotte1 {
+  from { background-position: 0 0; }
+  to { background-position: 0 -8153px; }
+}
+
+
+
+
