@@ -83,8 +83,10 @@ h1
     display: inline-block;
     background-size: cover;
 }
-.crotte1{
-  background: url('sprite.png') no-repeat top left; width: 221px; height: 897px;
+.caca1{
+  background: url('../images/crotte1.png') no-repeat top left; width: 221px; height: 897px;
+  animation: playcrotte1 .8s steps(9);
+  -webkit-animation: playcrotte1 .8s steps(9);
 }
 @keyframes playcrotte1 {
    100% { background-position: 0 -8153px; }
@@ -93,7 +95,117 @@ h1
   from { background-position: 0 0; }
   to { background-position: 0 -8153px; }
 }
+.cacaTaupe{
+  background: url('../images/cacaTaupe.png') no-repeat top left; width: 1280px; height: 895px;
+  animation: playcacataupe .8s steps(4) ;
+  -webkit-animation: playcacataupe .8s steps(4);
+}
+@keyframes playcacataupe {
+   100% { background-position: 0 -8153px; }
+}
+@-webkit-keyframes playcacataupe {
+  from { background-position: 0 0; }
+  to { background-position: 0 -8153px; }
+}
+.cacacochon{
+  background: url('../images/cacacochon.png') no-repeat top left; width: 1280px; height: 897px;
+  animation: playcacacochon .8s steps(7);
+  -webkit-animation: playcacacochon .8s steps(7);
+}
+@keyframes playcacacochon {
+   100% { background-position: 0 -6339px; }
+}
+@-webkit-keyframes playcacacochon {
+  from { background-position: 0 0; }
+  to { background-position: 0 -6339px; }
+}
+.cacachevre{
+  background: url('../images/cacachevre.png') no-repeat top left; width: 1280px; height: 884px;
+  animation: playcacachevre .8s steps(7);
+  -webkit-animation: playcacachevre .8s steps(7);
+}
+@keyframes playcacachevre {
+   100% { background-position: 0 -6248px; }
+}
+@-webkit-keyframes playcacachevre {
+  from { background-position: 0 0; }
+  to { background-position: 0 -6248px; }
+}
 
+.cacalap{
+  background: url('../images/cacalap.png') no-repeat top left; width: 1280px; height: 928px;
+  animation: playcacalap .8s steps(6);
+  -webkit-animation: playcacalap .8s steps(6);
+}
+@keyframes playcacalap {
+   100% { background-position: 0 -5618px; }
+}
+@-webkit-keyframes playcacalap {
+  from { background-position: 0 0; }
+  to { background-position: 0 -5618px; }
+}
 
+.cacachev{
+  background: url('../images/cacachev.png') no-repeat top left; width: 1280px; height: 928px;
+  animation: playcacachev .8s steps(9);
+  -webkit-animation: playcacachev .8s steps(9);
+}
+@keyframes playcacachev {
+   100% { background-position: 0 -8243px; }
+}
+@-webkit-keyframes playcacachev {
+  from { background-position: 0 0; }
+  to { background-position: 0 -8243px; }
+}
 
+.chev{
+  background: url('../images/chev.png') no-repeat top left; width: 1280px; height: 879px;
+  animation: playchev .8s steps(4);
+  -webkit-animation: playchev .8s steps(4);
+}
+@keyframes playchev {
+   100% { background-position: 0 -3546px; }
+}
+@-webkit-keyframes playchev {
+  from { background-position: 0 0; }
+  to { background-position: 0 -3546px; }
+}
 
+.culois{
+  background: url('../images/culois.png') no-repeat top left; width: 1280px; height: 936px;
+  animation: playculois .8s steps(4);
+  -webkit-animation: playculois .8s steps(4);
+}
+@keyframes playculois {
+   100% { background-position: 0 -3546px; }
+}
+@-webkit-keyframes playculois {
+  from { background-position: 0 0; }
+  to { background-position: 0 -3546px; }
+}
+
+.animois{
+  background: url('../images/animois.png') no-repeat top left; width: 1280px; height: 872px;
+  animation: playanimois .8s steps(9);
+  -webkit-animation: playanimois .8s steps(9);
+}
+@keyframes playanimois {
+   100% { background-position: 0 -7928px; }
+}
+@-webkit-keyframes playanimois {
+  from { background-position: 0 0; }
+  to { background-position: 0 -7928px; }
+}
+
+.venere{
+  background: url('../images/venere.png') no-repeat top left; width: 1280px; height: 853px;
+  animation: playvenere .8s steps(6);
+  -webkit-animation: playvenere .8s steps(6);
+}
+@keyframes playvenere {
+   100% { background-position: 0 -5116px; }
+}
+@-webkit-keyframes playvenere {
+  from { background-position: 0 0; }
+  to { background-position: 0 -5116px; }
+}
