@@ -1,114 +1,13 @@
 (function(){
    'use strict';
     
-    var nbScenes = 5;
-    var scenesNames = ['scene a', 'scene b', 'scene c', 'scene d', 'offset'];
-    var scenes = [
-        {
-            name : scenesNames[0],
-            bg: 'images/chemin/p1.png',
-            range: [0, 0.25]
-        },
-        {
-            name : scenesNames[1],
-            bg: 'images/chemin/p2.png',
-            range: [0.25, 0.5]
-        },
-        {
-            name : scenesNames[2],
-            bg: 'images/chemin/p3.png',
-            range: [0.5, 0.75]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p4.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p5.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p6.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p7.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p8.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p9.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p10.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p11.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p12.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p13.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p14.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p15.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p16.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p17.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p18.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[3],
-            bg: 'images/chemin/p19.png',
-            range: [0.75, 1]
-        },
-        {
-            name : scenesNames[4],
-            bg: 'images/chemin/scenea.jpg',
-            range: [1, 1]
-        },
-    ];
+    // default timeout
+    var animationTimeout = 2000; // 2s
     var animations = [
         {
-            range: [0, 0.1],
+            range: [0, 0],
             name: 'animation 1',
+            timeout: 1000, // custom timeout
             event: function(){
                 console.log('animation 1');
             }
@@ -202,6 +101,17 @@
     }(jQuery));
 
 
+    var scrollHandler = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    function pauseScroll(){
+        $('body').bind('wheel', scrollHandler);
+    }
+    function resumeScroll(){
+        $('body').unbind('wheel', scrollHandler);
+    }
+    
     /**
      * Throw animation
      * @param percent
@@ -211,7 +121,15 @@
         //var n = parseFloat(percent.toFixed(2));
         _.forEach(animations, function(animation, index){
             if(percent >= animation.range[0] && percent <= animation.range[1]){
+
+                var timeout = (animation.timeout) ? animation.timeout : animationTimeout;
+                pauseScroll();
                 animation.event();
+                setTimeout(function(){
+                    resumeScroll();
+                }, timeout);
+                
+                return;
             }
         });
     }
