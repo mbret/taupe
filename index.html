@@ -72,13 +72,10 @@
                 }
             } 
         ];
-
         var taupe = new Taupe();
         var ground = new Ground($('#ground'), scenes);
         
-        
         ground.prepare();
-
         
         var event = new Event('start');
         var event = new Event('1');
@@ -89,24 +86,7 @@
         window.addEventListener('in-scene-', function (e) {
 
         }, false);
-        
-        (function($) {
-            $.jInvertScroll(['.scroll'],{
-                height: 60000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-                onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-                    console.log(percent);
-                    console.log(sceneName);
-                    var sceneName = inScene(parseFloat(percent));
-                    
-                    // move taupe
-                    taupe.move(parseFloat(percent));
-                    
-                    // throw animation
-                    miscAnimate(parseFloat(percent));
-                }
-            });
-        }(jQuery));
-        
+
         function miscAnimate(percent){
             
             var n = parseFloat(percent.toFixed(2));
@@ -118,24 +98,24 @@
             });
         }
         
-        
-        
-        
-        /**
-         * Give the actual scene name.
-         * @param percent
-         * @returns {*}
-         */
-        function inScene(percent){
-            var name = "";
-            _.forEach(scenes, function(scene, key){
-                if(percent >= scene[0] && percent <= scene[1]){
-                    name = key;
+        (function($) {
+            $.jInvertScroll(['.scroll'],{
+                height: 60000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+                onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+                    console.log("current perent is " + percent);
+                    console.log("current scene is " + ground.currentScene);
+                    
+                    // Set current scene
+                    ground.updateScene(parseFloat(percent));
+
+                    // move taupe
+                    taupe.move(parseFloat(percent));
+
+                    // throw animation
+                    miscAnimate(parseFloat(percent));
                 }
             });
-            return name;
-        }
-    
+        }(jQuery));
         
     </script>
 </body>
