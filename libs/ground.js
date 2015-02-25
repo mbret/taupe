@@ -7,12 +7,15 @@
         var that = this;
         
         this.prepare = function(){
+            var totalWidth = 50;
+            var windowWidth = $(window).width();
             _.forEach(scenes, function(n, key){
                 $elem.append('<div class="scene" id="' + key + '" ></div>');
-                
+                totalWidth += windowWidth;
             });
-            var windowWidth = $(window).width();
+            
             $('.scene').css({'width':windowWidth});
+            $elem.css({'width': totalWidth})
         }
     }
     

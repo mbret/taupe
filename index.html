@@ -35,6 +35,44 @@
             3: [0.4, 0.6],
             4: [0.6, 1]
         }
+        var animations = [
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 1');
+                }
+            },
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 2');
+                }
+            },
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 3');
+                }
+            },
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 4');
+                }
+            },
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 5');
+                }
+            } 
+        ];
+
         var taupe = new Taupe();
         var ground = new Ground($('#ground'), scenes);
         
@@ -57,12 +95,30 @@
                 height: 60000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
                 onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
                     console.log(percent);
-                    var sceneName = inScene(parseFloat(percent));
                     console.log(sceneName);
+                    var sceneName = inScene(parseFloat(percent));
+                    
+                    // move taupe
                     taupe.move(parseFloat(percent));
+                    
+                    // throw animation
+                    miscAnimate(parseFloat(percent));
                 }
             });
         }(jQuery));
+        
+        function miscAnimate(percent){
+            
+            var n = parseFloat(percent.toFixed(2));
+            _.forEach(animations, function(animation, index){
+//                console.log(n, animation);
+                if(animation.time === n){
+                    animation.event();
+                }
+            });
+        }
+        
+        
         
         
         /**
