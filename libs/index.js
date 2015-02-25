@@ -6,27 +6,102 @@
     var scenes = [
         {
             name : scenesNames[0],
-            bg: 'scenea.jpg',
+            bg: 'images/chemin/p1.png',
             range: [0, 0.25]
         },
         {
             name : scenesNames[1],
-            bg: 'scenea.jpg',
+            bg: 'images/chemin/p2.png',
             range: [0.25, 0.5]
         },
         {
             name : scenesNames[2],
-            bg: 'scenea.jpg',
+            bg: 'images/chemin/p3.png',
             range: [0.5, 0.75]
         },
         {
             name : scenesNames[3],
-            bg: 'scenea.jpg',
+            bg: 'images/chemin/p4.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p5.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p6.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p7.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p8.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p9.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p10.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p11.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p12.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p13.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p14.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p15.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p16.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p17.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p18.png',
+            range: [0.75, 1]
+        },
+        {
+            name : scenesNames[3],
+            bg: 'images/chemin/p19.png',
             range: [0.75, 1]
         },
         {
             name : scenesNames[4],
-            bg: 'scenea.jpg',
+            bg: 'images/chemin/scenea.jpg',
             range: [1, 1]
         },
     ];
