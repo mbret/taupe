@@ -107,35 +107,35 @@
     ];
     var animations = [
         {
-            time: 0.01,
+            range: [0, 0.1],
             name: 'animation 1',
             event: function(){
                 console.log('animation 1');
             }
         },
         {
-            time: 0.01,
+            range: [0, 0],
             name: 'animation 1',
             event: function(){
                 console.log('animation 2');
             }
         },
         {
-            time: 0.01,
+            range: [0, 0],
             name: 'animation 1',
             event: function(){
                 console.log('animation 3');
             }
         },
         {
-            time: 0.01,
+            range: [0, 0],
             name: 'animation 1',
             event: function(){
                 console.log('animation 4');
             }
         },
         {
-            time: 0.01,
+            range: [0, 0],
             name: 'animation 1',
             event: function(){
                 console.log('animation 5');
@@ -207,10 +207,10 @@
      * @param percent
      */
     function miscAnimate(percent){
-
-        var n = parseFloat(percent.toFixed(2));
+        console.log(percent);
+        //var n = parseFloat(percent.toFixed(2));
         _.forEach(animations, function(animation, index){
-            if(animation.time === n){
+            if(percent >= animation.range[0] && percent <= animation.range[1]){
                 animation.event();
             }
         });
