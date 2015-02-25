@@ -58,16 +58,6 @@ h1
   left: 50px;
 
 }
-.walk{
-    background: url('../images/walk.png') no-repeat top left;
-    width: 371px; 
-    height: 381px;
-    animation: play 1.8s steps(4) infinite;
-    -webkit-animation: play 1.8s steps(4) infinite;
-}
-@keyframes play {
-   100% { background-position: -1463px; }
-}
 
 .scene{
     height:200px; 
