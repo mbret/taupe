@@ -23,13 +23,27 @@
                     return;
                 }
             });
+            
             if( positionToAffect ){
                 that.isMoving = true;
-                $elem.removeClass($elem.data('currentClass'));
-                $elem.addClass(positionToAffect.css);
-                $elem.data('currentClass', positionToAffect.css);
                 
-                console.log(positionToAffect.left + 'px', $elem.css('left'));
+                // special css for this behavior
+                if(positionToAffect.css){
+                    $elem.removeClass($elem.data('currentClass'));
+                    $elem.addClass(positionToAffect.css);
+                    $elem.data('currentClass', positionToAffect.css);
+                }
+                
+                // special animation for this range
+                // played once only
+                if(positionToAffect.animate && positionToAffect.animate.played !== true){
+                    positionToAffect.animate.played = true;
+                    Utils.pauseScroll();
+                    $elem.animate(positionToAffect.animate.behavior, positionToAffect.animate.timeout, function() {
+                        Utils.resumeScroll();
+                    });
+                }
+                
                 if(positionToAffect.left && (positionToAffect.left + 'px') !== $elem.css('left')){
                     //Utils.pauseScroll();
                     //$elem.animate({
