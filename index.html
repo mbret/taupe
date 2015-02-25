@@ -95,12 +95,6 @@
                 }
             } 
         ];
-        var taupe = new Taupe();
-        var ground = new Ground($('#ground'), scenes);
-        
-        // Prepare ground
-        // add all scene with correct width
-        ground.prepare();
 
         /**
          * Throw animation
@@ -110,7 +104,6 @@
             
             var n = parseFloat(percent.toFixed(2));
             _.forEach(animations, function(animation, index){
-//                console.log(n, animation);
                 if(animation.time === n){
                     animation.event();
                 }
@@ -118,6 +111,14 @@
         }
         
         (function($){
+
+            var taupe = new Taupe();
+            var ground = new Ground($('#ground'), scenes);
+            
+            // Prepare ground
+            // add all scene with correct width
+            ground.prepare();
+            
             $.jInvertScroll(['.scroll'],{
                 height: 60000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
                 onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
