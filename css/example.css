@@ -10,7 +10,7 @@ body
 body
 {
   overflow-x: hidden;
-  background: url('../images/bg.jpg') repeat top left;
+  /*background: url('../images/bg.jpg') repeat top left;*/
 }
 
 h1
@@ -63,6 +63,7 @@ h1
     width: 371px; 
     height: 381px;
     animation: play 1.8s steps(4) infinite;
+    -webkit-animation: play 1.8s steps(4) infinite;
 }
 @keyframes play {
    100% { background-position: -1463px; }
