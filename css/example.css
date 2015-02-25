@@ -10,7 +10,7 @@ body
 body
 {
   overflow-x: hidden;
-  background: url('../images/bg.jpg') repeat top left;
+  /*background: url('../images/bg.jpg') repeat top left;*/
 }
 
 h1

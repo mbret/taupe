@@ -10,8 +10,8 @@
         this.prepare = function(){
             var totalWidth = 50;
             var windowWidth = $(window).width();
-            _.forEach(scenes, function(n, key){
-                $elem.append('<div class="scene" id="' + key + '" ></div>');
+            _.forEach(scenes, function(scene, index){
+                $elem.append('<div class="scene" id="' + scene.name + '" ></div>');
                 totalWidth += windowWidth;
             });
             
@@ -30,9 +30,9 @@
          */
         function inScene(percent){
             var name = "";
-            _.forEach(that.scenes, function(scene, key){
-                if(percent >= scene[0] && percent <= scene[1]){
-                    name = key;
+            _.forEach(that.scenes, function(scene, index){
+                if(percent >= scene.range[0] && percent <= scene.range[1]){
+                    name = scene.name;
                 }
             });
             return name;

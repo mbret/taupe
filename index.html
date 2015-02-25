@@ -32,12 +32,35 @@
     <script type="text/javascript" src="dist/js/jquery.jInvertScroll.js"></script>
     <script type="text/javascript">
 
-        var scenes = {
-            start: [0, 0.2],
-            2: [0.2, 0.4],
-            3: [0.4, 0.6],
-            4: [0.6, 1]
-        }
+        var nbScenes = 5;
+        var scenesNames = ['scene a', 'scene b', 'scene c', 'scene d', 'offset'];
+        var scenes = [
+            {
+                name : scenesNames[0],
+                bg: 'scenea.jpg',
+                range: [0, 0.25]
+            },
+            {
+                name : scenesNames[1],
+                bg: 'scenea.jpg',
+                range: [0.25, 0.5]
+            },
+            {
+                name : scenesNames[2],
+                bg: 'scenea.jpg',
+                range: [0.5, 0.75]
+            },
+            {
+                name : scenesNames[3],
+                bg: 'scenea.jpg',
+                range: [0.75, 1]
+            },
+            {
+                name : scenesNames[4],
+                bg: 'scenea.jpg',
+                range: [1, 1]
+            },
+        ];
         var animations = [
             {
                 time: 0.01,
@@ -78,18 +101,14 @@
         var taupe = new Taupe();
         var ground = new Ground($('#ground'), scenes);
         
+        // Prepare ground
+        // add all scene with correct width
         ground.prepare();
-        
-        var event = new Event('start');
-        var event = new Event('1');
-        var event = new Event('2');
-        var event = new Event('3');
 
-        // Listen for the event.
-        window.addEventListener('in-scene-', function (e) {
-
-        }, false);
-
+        /**
+         * Throw animation
+         * @param percent
+         */
         function miscAnimate(percent){
             
             var n = parseFloat(percent.toFixed(2));
@@ -101,7 +120,7 @@
             });
         }
         
-        (function($) {
+        (function($){
             $.jInvertScroll(['.scroll'],{
                 height: 60000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
                 onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
