@@ -50,7 +50,7 @@ h1
 .front
 {
   z-index: 1000;
-  width: 6000px;
+  /*width: 6000px;*/
 }
 .perso{
   position: fixed;
@@ -66,4 +66,11 @@ h1
 }
 @keyframes play {
    100% { background-position: -1463px; }
+}
+
+.scene{
+    height:200px; 
+    width: 100%; 
+    border:1px solid green; 
+    display: inline-block;
 }

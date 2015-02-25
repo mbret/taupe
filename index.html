@@ -13,9 +13,9 @@
     
     <div class="front scroll">
         <!--<img src="images/chemin.png" alt="" />-->
-        <div style="height:200px; width: 1903px; border:1px solid green; display: inline-block;"></div>
-        <div style="height:200px;width: 1903px; border:1px solid red;display: inline-block;"></div>
-        <div style="height:200px;width: 1903px; border:1px solid blue;display: inline-block;"></div>
+        <div id="ground">
+            
+        </div>
     </div>
     
     <div class="front perso walk" id="taupe">
@@ -25,17 +25,57 @@
     <script type="text/javascript" src="libs/jquery.min.js"></script>
     <script type="text/javascript" src="libs/lodash.js"></script>
     <script type="text/javascript" src="libs/taupe.js"></script>
+    <script type="text/javascript" src="libs/ground.js"></script>
     <script type="text/javascript" src="dist/js/jquery.jInvertScroll.js"></script>
     <script type="text/javascript">
 
-        var taupe = new Taupe();
-        
         var scenes = {
             start: [0, 0.2],
             2: [0.2, 0.4],
             3: [0.4, 0.6],
             4: [0.6, 1]
         }
+        var animations = [
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 1');
+                }
+            },
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 2');
+                }
+            },
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 3');
+                }
+            },
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 4');
+                }
+            },
+            {
+                time: 0.01,
+                name: 'animation 1',
+                event: function(){
+                    console.log('animation 5');
+                }
+            } 
+        ];
+        var taupe = new Taupe();
+        var ground = new Ground($('#ground'), scenes);
+        
+        ground.prepare();
         
         var event = new Event('start');
         var event = new Event('1');
@@ -46,35 +86,36 @@
         window.addEventListener('in-scene-', function (e) {
 
         }, false);
+
+        function miscAnimate(percent){
+            
+            var n = parseFloat(percent.toFixed(2));
+            _.forEach(animations, function(animation, index){
+//                console.log(n, animation);
+                if(animation.time === n){
+                    animation.event();
+                }
+            });
+        }
         
         (function($) {
             $.jInvertScroll(['.scroll'],{
                 height: 60000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
                 onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-                    console.log(percent);
-                    var sceneName = inScene(parseFloat(percent));
-                    console.log(sceneName);
+                    console.log("current perent is " + percent);
+                    console.log("current scene is " + ground.currentScene);
+                    
+                    // Set current scene
+                    ground.updateScene(parseFloat(percent));
+
+                    // move taupe
                     taupe.move(parseFloat(percent));
+
+                    // throw animation
+                    miscAnimate(parseFloat(percent));
                 }
             });
         }(jQuery));
-        
-        
-        /**
-         * Give the actual scene name.
-         * @param percent
-         * @returns {*}
-         */
-        function inScene(percent){
-            var name = "";
-            _.forEach(scenes, function(scene, key){
-                if(percent >= scene[0] && percent <= scene[1]){
-                    name = key;
-                }
-            });
-            return name;
-        }
-    
         
     </script>
 </body>
