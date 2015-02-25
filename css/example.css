@@ -85,8 +85,10 @@ h1
 }
 .caca1{
   background: url('../images/crotte1.png') no-repeat top left; width: 221px; height: 897px;
-  animation: playcrotte1 .8s steps(9);
-  -webkit-animation: playcrotte1 .8s steps(9);
+  animation: playcrotte1 1.8s steps(9);
+  -webkit-animation: playcrotte1 1.8s steps(9);
+  left: 11%;
+  top: -350px;
 }
 @keyframes playcrotte1 {
    100% { background-position: 0 -8153px; }
@@ -99,6 +101,7 @@ h1
   background: url('../images/cacaTaupe.png') no-repeat top left; width: 1280px; height: 895px;
   animation: playcacataupe .8s steps(4) ;
   -webkit-animation: playcacataupe .8s steps(4);
+
 }
 @keyframes playcacataupe {
    100% { background-position: 0 -8153px; }
@@ -201,6 +204,8 @@ h1
   background: url('../images/venere.png') no-repeat top left; width: 1280px; height: 853px;
   animation: playvenere .8s steps(6);
   -webkit-animation: playvenere .8s steps(6);
+  left: 11%;
+  top: -350px;
 }
 @keyframes playvenere {
    100% { background-position: 0 -5116px; }
@@ -208,4 +213,8 @@ h1
 @-webkit-keyframes playvenere {
   from { background-position: 0 0; }
   to { background-position: 0 -5116px; }
+}
+.fixed{
+  position: fixed;
+  z-index: 9999999;
 }
