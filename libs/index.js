@@ -5,7 +5,7 @@
     var animationTimeout = 2000; // 2s
     var animations = [
         {
-            range: [0, 0],
+            range: [1, 1],
             name: 'animation 1',
             timeout: 1000, // custom timeout
             event: function(){
@@ -13,38 +13,20 @@
             }
         },
         {
-            range: [0, 0],
-            name: 'animation 1',
+            range: [1, 1],
+            name: 'animation 2',
             event: function(){
                 console.log('animation 2');
             }
         },
-        {
-            range: [0, 0],
-            name: 'animation 1',
-            event: function(){
-                console.log('animation 3');
-            }
-        },
-        {
-            range: [0, 0],
-            name: 'animation 1',
-            event: function(){
-                console.log('animation 4');
-            }
-        },
-        {
-            range: [0, 0],
-            name: 'animation 1',
-            event: function(){
-                console.log('animation 5');
-            }
-        }
     ];
     var moleBehavior = [
         {
-            range: [0, 0.10],
-            left: '0%',
+            range: [0, 0.025],
+            css: 'invisible'
+        },
+        {
+            range: [0.025, 0.5],
             css: 'walk'
         },
         {
@@ -101,17 +83,6 @@
     }(jQuery));
 
 
-    var scrollHandler = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-    }
-    function pauseScroll(){
-        $('body').bind('wheel', scrollHandler);
-    }
-    function resumeScroll(){
-        $('body').unbind('wheel', scrollHandler);
-    }
-    
     /**
      * Throw animation
      * @param percent
@@ -123,15 +94,28 @@
             if(percent >= animation.range[0] && percent <= animation.range[1]){
 
                 var timeout = (animation.timeout) ? animation.timeout : animationTimeout;
-                pauseScroll();
+                Utils.pauseScroll();
                 animation.event();
                 setTimeout(function(){
-                    resumeScroll();
+                    Utils.resumeScroll();
                 }, timeout);
                 
                 return;
             }
         });
+    }
+
+    var scrollHandler = function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+    window.Utils = {
+        pauseScroll: function(){
+            $('body').bind('wheel', scrollHandler);
+        },
+        resumeScroll: function(){
+            $('body').unbind('wheel', scrollHandler);
+        }
     }
     
 })();

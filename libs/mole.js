@@ -12,9 +12,9 @@
         this.move = function(percent){
             //var n = parseFloat(percent.toFixed(2));
             
-            if(that.isMoving){
-                return;
-            }
+            //if(that.isMoving){
+            //    return;
+            //}
             
             var positionToAffect = null;
             _.forEach(that.positionScene, function(position, index){
@@ -25,12 +25,21 @@
             });
             if( positionToAffect ){
                 that.isMoving = true;
+                $elem.removeClass($elem.data('currentClass'));
                 $elem.addClass(positionToAffect.css);
-                $elem.animate({
-                    left: positionToAffect.left
-                }, 500, function() {
-                    that.isMoving = false;
-                });
+                $elem.data('currentClass', positionToAffect.css);
+                
+                console.log(positionToAffect.left + 'px', $elem.css('left'));
+                if(positionToAffect.left && (positionToAffect.left + 'px') !== $elem.css('left')){
+                    //Utils.pauseScroll();
+                    //$elem.animate({
+                    //    left: positionToAffect.left
+                    //}, 500, function() {
+                    //    //that.isMoving = false;
+                    //    Utils.resumeScroll();
+                    //});
+                }
+
             }
         }
 
