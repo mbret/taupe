@@ -67,3 +67,10 @@ h1
 @keyframes play {
    100% { background-position: -1463px; }
 }
+
+.scene{
+    height:200px; 
+    width: 100%; 
+    border:1px solid green; 
+    display: inline-block;
+}

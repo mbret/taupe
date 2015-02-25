@@ -13,9 +13,9 @@
     
     <div class="front scroll">
         <!--<img src="images/chemin.png" alt="" />-->
-        <div style="height:200px; width: 1903px; border:1px solid green; display: inline-block;"></div>
-        <div style="height:200px;width: 1903px; border:1px solid red;display: inline-block;"></div>
-        <div style="height:200px;width: 1903px; border:1px solid blue;display: inline-block;"></div>
+        <div id="ground">
+            
+        </div>
     </div>
     
     <div class="front perso walk" id="taupe">
@@ -25,17 +25,22 @@
     <script type="text/javascript" src="libs/jquery.min.js"></script>
     <script type="text/javascript" src="libs/lodash.js"></script>
     <script type="text/javascript" src="libs/taupe.js"></script>
+    <script type="text/javascript" src="libs/ground.js"></script>
     <script type="text/javascript" src="dist/js/jquery.jInvertScroll.js"></script>
     <script type="text/javascript">
 
-        var taupe = new Taupe();
-        
         var scenes = {
             start: [0, 0.2],
             2: [0.2, 0.4],
             3: [0.4, 0.6],
             4: [0.6, 1]
         }
+        var taupe = new Taupe();
+        var ground = new Ground($('#ground'), scenes);
+        
+        
+        ground.prepare();
+
         
         var event = new Event('start');
         var event = new Event('1');
