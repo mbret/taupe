@@ -85,6 +85,7 @@ h1
 }
 .anim1{ left: 23%; top: -20px;}
 .anim2{ left: -13%; top: -50px;}
+.anim3{ left: 11%;}
 
 
 .caca1{
@@ -194,8 +195,8 @@ h1
 
 .animois{
   background: url('../images/animois.png') no-repeat top left; width: 1280px; height: 872px;
-  animation: playanimois .8s steps(9);
-  -webkit-animation: playanimois .8s steps(9);
+  animation: playanimois 1s steps(9);
+  -webkit-animation: playanimois 1s steps(9);
 }
 @keyframes playanimois {
    100% { background-position: 0 -7928px; }
