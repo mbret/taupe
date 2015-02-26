@@ -7,7 +7,7 @@ var animations = [
             $(".anim1").addClass("caca1");
             setTimeout(function(){
                 $(".anim1").addClass("hide");
-                console.log('callback animation 1')
+                console.log('callback animation 1');
                 cb();
             }, 2000);
         }
@@ -20,14 +20,14 @@ var animations = [
             $(".anim2").addClass("venere");
             setTimeout(function(){
                 $(".anim2").addClass("ground-clean");
-                Sounds.playChosedSound(2, function(){
+                //Sounds.playChosedSound(2, function(){
                     console.log('callback test son');
                     $(".anim2").removeClass("ground-clean");
                     $(".anim2").addClass("hide");
                     $("#taupe").addClass("walk");
 
                     cb();
-                });
+                //});
             }, 1000);
         }
     },

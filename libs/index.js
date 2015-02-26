@@ -76,10 +76,12 @@
     window.Utils = {
         animationQueue: 0,
         pauseScroll: function(){
+            if(Utils.animationQueue < 0) throw Error("Invalid animationQueue", Utils.animationQueue);
             Utils.animationQueue ++;
             $('body').bind('wheel', scrollHandler);
         },
         resumeScroll: function(){
+            if(Utils.animationQueue <= 0) throw Error("Invalid animationQueue", Utils.animationQueue);
             Utils.animationQueue --;
             if(Utils.animationQueue === 0){
                 $('body').unbind('wheel', scrollHandler);
