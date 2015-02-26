@@ -32,39 +32,54 @@ var animations = [
         }
     },
     {
-        range: [0.044, 0.045],
+        range: [0.047, 0.049],
         name: 'animation 3',
         event: function(cb){
             $(".anim3").removeClass("hide");
             $(".anim3").addClass("animois");
             setTimeout(function(){
                 $(".anim3").addClass("hide");
-            }, 2000);
-            cb();
+                $(".oiseaufront").removeClass("hide");
+                Sounds.playChosedSound(3, function(){
+                    $(".oiseaufront").addClass("hide");
+
+                    cb();
+                });
+            }, 800);
         }
     },
     {
-        range: [1000,1000],
+        range: [0.0795, 0.096],
         name: 'animation 4',
         event: function(cb){
             $(".anim4").removeClass("hide");
             $(".anim4").addClass("culois");
             setTimeout(function(){
                 $(".anim4").addClass("hide");
-            }, 2000);
-            cb();
+                $(".oiseauback").removeClass("hide");
+                Sounds.playChosedSound(4, function(){
+                    $(".oiseauback").addClass("hide");
+
+                    cb();
+                });
+            }, 800);
         }
     },
     {
-        range: [1000,1000],
+        range: [0.0913, 0.0920],
         name: 'animation 5',
         event: function(cb){
             $(".anim5").removeClass("hide");
-            $(".anim5").addClass("");
+            $(".anim5").addClass("chev");
             setTimeout(function(){
                 $(".anim5").addClass("hide");
-            }, 2000);
-            cb();
+                Sounds.playChosedSound(5, function(){
+                    $(".cheval").addClass("hide");
+
+                    cb();
+                });
+            }, 1000);
+            
         }
     },
     {
