@@ -1,7 +1,7 @@
 var moleBehavior = [
     // no taupe
     {
-        range: [0, 0.0017],
+        range: [0, 0.0034],
         css: 'invisible',
         left: '15%',
         bottom: '3%',
@@ -131,36 +131,36 @@ var moleBehavior = [
         css: 'goat12'
     },
     // goat 12
-    {
-        range: [0.187, 0.189],
-        left: '10%',
-        bottom: '3%',
-        css: 'goat1'
-    },
-    {
-        range: [0.189, 0.190],
-        left: '10%',
-        bottom: '3%',
-        css: 'walk'
-    },
-    {
-        range: [0.190, 0.191],
-        animate: {
-            behavior: { left: '-5%' },
-            timeout: 500
-        },
-        bottom: '3%',
-        css: 'walk'
-    },
+    //{
+    //    range: [0.187, 0.189],
+    //    left: '10%',
+    //    bottom: '3%',
+    //    css: 'goat1'
+    //},
+    //{
+    //    range: [0.189, 0.190],
+    //    left: '10%',
+    //    bottom: '3%',
+    //    css: 'walk'
+    //},
+    //{
+    //    range: [0.190, 0.191],
+    //    animate: {
+    //        behavior: { left: '-5%' },
+    //        timeout: 500
+    //    },
+    //    bottom: '3%',
+    //    css: 'walk'
+    //},
     // goat 2
+    //{
+    //    range: [0.191, 0.1935],
+    //    left: '-5%',
+    //    bottom: '3%',
+    //    css: 'goat2'
+    //},
     {
-        range: [0.191, 0.1935],
-        left: '-5%',
-        bottom: '3%',
-        css: 'goat2'
-    },
-    {
-        range: [0.2037, 0.213],
+        range: [0.187, 0.213],
         animate: {
             behavior: { left: '10%' },
             timeout: 500

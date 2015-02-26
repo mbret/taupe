@@ -98,7 +98,7 @@ h1
 .oiseaufront{ background: url('../images/animois.png') no-repeat -558px -7056px; width: 722px; height: 275px; left:51%; }
 .oiseauback{ background: url('../images/culois.png') no-repeat 0 -3784px; width: 533px; height: 221px; }
 .caca1{
-    border:1px solid red;
+    /*border:1px solid red;*/
   background: url('../images/crotte1.png') no-repeat top left; 
     width: 221px;
     height: 897px;

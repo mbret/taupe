@@ -29,6 +29,7 @@
                 
                 // special css for this behavior
                 if(positionToAffect.css){
+                    console.log($elem.data('current-class'), positionToAffect);
                     $elem.removeClass($elem.data('current-class'));
                     $elem.addClass(positionToAffect.css);
                     $elem.data('current-class', positionToAffect.css);
