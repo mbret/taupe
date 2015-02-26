@@ -7,7 +7,7 @@ var moleBehavior = [
     // taupe in ground
     {
         range: [0.0017, 0.0034],
-        css: 'ground-clean'
+        css: ''
     },
     // taupe walk scene 1 -> scene 2
     {
