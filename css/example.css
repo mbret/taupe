@@ -86,8 +86,17 @@ h1
 .anim1{ left: 23%; top: -20px;}
 .anim2{ left: -13%; top: -50px;}
 .anim3{ left: 11%;}
-.oiseaufront{ background: url('../images/animois.png') no-repeat -558px -7056px; width: 722px; height: 275px; left:51%; }
+.anim4{ left: 0;}
+.anim4{ left: 0;}
+.anim4{ left: 0;}
+.anim4{ left: 0;}
+.anim4{ left: 0;}
+.anim4{ left: 0;}
+.anim4{ left: 0;}
 
+
+.oiseaufront{ background: url('../images/animois.png') no-repeat -558px -7056px; width: 722px; height: 275px; left:51%; }
+.oiseauback{ background: url('../images/culois.png') no-repeat 0 -3784px; width: 533px; height: 221px; }
 .caca1{
     border:1px solid red;
   background: url('../images/crotte1.png') no-repeat top left; 
