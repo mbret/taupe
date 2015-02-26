@@ -8,6 +8,11 @@
 
     function playChosedSound(page, mainCallback) {
 
+        if( Sounds.deactive ){
+            console.log('sound deactivated');
+            return mainCallback();
+        }
+        
         var obj = jsonfile.dialog;
         var adress = 'http://vaas.acapela-group.com/Services/Streamer.ogg?req_voice=';
         var text = '&req_text=';
@@ -98,6 +103,10 @@
             {
                 "page": "1",
                 "texts": [
+                    {
+                        "char": "T",
+                        "text": "Hey batard, c'est toi qui m'a chié sur la gueule ?"
+                    },
                     {
                         "char": "N",
                         "text": "Comme tous les soirs, la petite taupe sortit de terre son museau pointu, juste pour voir si le soleil avait disparu. Et voici ce qui arriva. C'etait rond et marron, aussi long qu'une saucisse, et le plus horrible fut que ca lui tomba exactement sur la tete, sploutsch !"
@@ -376,7 +385,8 @@
     // Export library
     window.Sounds = {
         playSound: playSound,
-        playChosedSound: playChosedSound
+        playChosedSound: playChosedSound,
+        deactive : false
     }
     
 })();

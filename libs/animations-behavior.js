@@ -3,6 +3,15 @@ var animations = [
         range: [0, 0.0017],
         name: 'animation 1',
         event: function(cb){
+            Sounds.playChosedSound(1, function(){
+                cb();
+            });
+        }
+    },
+    {
+        range: [0.0020, 0.0034],
+        name: 'animation 1',
+        event: function(cb){
             $(".anim1").removeClass("hide");
             $(".anim1").addClass("caca1");
             setTimeout(function(){
@@ -12,11 +21,11 @@ var animations = [
                 setTimeout(function(){
                     $(".anim2").addClass("ground-clean");
                     //Sounds.playChosedSound(2, function(){
-                    $(".anim2").removeClass("ground-clean");
-                    $(".anim2").addClass("hide");
-                    $("#taupe").addClass("walk");
+                        $(".anim2").removeClass("ground-clean");
+                        $(".anim2").addClass("hide");
+                        $("#taupe").addClass("walk");
 
-                    cb();
+                        cb();
                     //});
                 }, 3000);
             }, 1800);

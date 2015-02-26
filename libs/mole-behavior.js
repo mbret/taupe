@@ -1,14 +1,14 @@
 var moleBehavior = [
     // no taupe
     {
-        range: [0, 0.0034],
+        range: [0, 0.0051],
         css: 'invisible',
         left: '15%',
         bottom: '3%',
     },
     // taupe walk scene 1 -> scene 2
     {
-        range: [0.0034, 0.044],
+        range: [0.0051, 0.044],
         css: 'walk',
         //animate: {
         //    behavior: { left: '15%', bottom: '3%' },

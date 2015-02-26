@@ -1,6 +1,8 @@
 (function(){
    'use strict';
     
+    Sounds.deactive = true;
+    
     // default timeout
     var animationTimeout = 2000; // 2s
 
