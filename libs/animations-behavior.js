@@ -1,11 +1,17 @@
 var animations = [
     {
-        range: [1, 1],
+        range: [0, 0.0017],
         name: 'animation 1',
         event: function(cb){
-            console.log('animation 1');
+            $(".anim1").removeClass("hide");
+            $(".anim1").addClass("caca1");
             setTimeout(function(){
+<<<<<<< HEAD
                 console.log('callback animation 1');
+=======
+                $(".anim1").addClass("hide");
+                console.log('callback animation 1')
+>>>>>>> a49137f1f402dda7b769d8c3620f0be70ec135b9
                 cb();
             }, 2000);
         }
@@ -14,10 +20,19 @@ var animations = [
         range: [0.0017, 0.0034],
         name: 'test son',
         event: function(cb){
-            Sounds.playChosedSound(2, function(){
-                console.log('callback test son');
-                cb();
-            });
+            $(".anim2").removeClass("hide");
+            $(".anim2").addClass("venere");
+            setTimeout(function(){
+                $(".anim2").addClass("ground-clean");
+                Sounds.playChosedSound(2, function(){
+                    console.log('callback test son');
+                    $(".anim2").removeClass("ground-clean");
+                    $(".anim2").addClass("hide");
+                    $("#taupe").addClass("walk");
+
+                    cb();
+                });
+            }, 1000);
         }
     },
     {

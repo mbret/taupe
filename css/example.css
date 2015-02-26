@@ -83,6 +83,10 @@ h1
     display: inline-block;
     background-size: cover;
 }
+.anim1{ left: 23%; top: -20px;}
+.anim2{ left: -13%; top: -50px;}
+
+
 .caca1{
     border:1px solid red;
   background: url('../images/crotte1.png') no-repeat top left; 
@@ -90,8 +94,6 @@ h1
     height: 897px;
   animation: playcrotte1 1.8s steps(9);
   -webkit-animation: playcrotte1 1.8s steps(9);
-  left: 23%;
-  top: -20px;
 }
 @keyframes playcrotte1 {
    100% { background-position: 0 -8153px; }
@@ -205,8 +207,8 @@ h1
 
 .venere{
   background: url('../images/venere.png') no-repeat top left; width: 1280px; height: 853px;
-  animation: playvenere .8s steps(6);
-  -webkit-animation: playvenere .8s steps(6);
+  animation: playvenere 1s steps(6);
+  -webkit-animation: playvenere 1s steps(6);
   left: -13%;
   top: -50px;
 }
@@ -217,7 +219,8 @@ h1
   from { background-position: 0 0; }
   to { background-position: 0 -5116px; }
 }
-.fixed{
+.animation{
   position: fixed;
-  z-index: 9999999;
+  z-index: 1;
 }
+.hide{ display : none;}
