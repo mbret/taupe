@@ -5,7 +5,7 @@ var animations = [
         event: function(cb){
             console.log('animation 1');
             setTimeout(function(){
-                console.log('callback animation 1')
+                console.log('callback animation 1');
                 cb();
             }, 2000);
         }
