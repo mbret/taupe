@@ -120,13 +120,13 @@ var moleBehavior = [
         range: [0.186, 0.187],
         left: '10%',
         bottom: '3%',
-        css: 'goat1'
+        css: 'goat12'
     },
     {
         range: [0.187, 0.189],
         left: '10%',
         bottom: '3%',
-        css: 'walk'
+        css: 'goat1'
     },
     {
         range: [0.189, 1],
