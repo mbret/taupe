@@ -3,60 +3,8 @@
     
     // default timeout
     var animationTimeout = 2000; // 2s
-    var animations = [
-        {
-            range: [0.01, 0.012],
-            name: 'animation 1',
-            timeout: 2000, // custom timeout
-            event: function(){
-                console.log('animation 1');
-            },
-            callback: function(){
-                console.log('callback animation 1')
-            }
-        },
-        {
-            range: [1, 1],
-            name: 'animation 2',
-            event: function(){
-                console.log('animation 2');
-            }
-        },
-    ];
-    var moleBehavior = [
-        {
-            range: [0, 0.025],
-            css: 'invisible'
-        },
-        {
-            range: [0.025, 0.5],
-            css: 'walk',
-            animate: {
-                behavior: { left: '10%' },
-                timeout: 500
-            }
-        },
-        {
-            range: [0.10, 0.20],
-            left: '10%',
-            css: 'walk'
-        },
-        {
-            range: [0.20, 0.30],
-            left: '50%',
-            css: 'walk'
-        },
-        {
-            range: [0.30, 0.60],
-            left: '60%',
-            css: 'walk'
-        },
-        {
-            range: [0.60, 1],
-            left: '0%',
-            css: 'walk'
-        },
-    ];
+
+
 
     // Main program
     // Bootstrap
@@ -123,7 +71,7 @@
     var scrollHandler = function(e) {
         e.preventDefault();
         e.stopPropagation();
-    }
+    };
     window.Utils = {
         pauseScroll: function(){
             $('body').bind('wheel', scrollHandler);

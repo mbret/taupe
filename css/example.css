@@ -79,12 +79,15 @@ h1
 .scene{
     /*height:853px;*/
     width: 100%; 
-    border:1px solid green; 
+    border-top:2px solid green;
     display: inline-block;
     background-size: cover;
 }
 .caca1{
-  background: url('../images/crotte1.png') no-repeat top left; width: 221px; height: 897px;
+    border:1px solid red;
+  background: url('../images/crotte1.png') no-repeat top left; 
+    width: 221px;
+    height: 897px;
   animation: playcrotte1 1.8s steps(9);
   -webkit-animation: playcrotte1 1.8s steps(9);
   left: 23%;
