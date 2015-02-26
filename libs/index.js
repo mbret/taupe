@@ -73,11 +73,16 @@
         e.stopPropagation();
     };
     window.Utils = {
+        animationQueue: 0,
         pauseScroll: function(){
+            Utils.animationQueue ++;
             $('body').bind('wheel', scrollHandler);
         },
         resumeScroll: function(){
-            $('body').unbind('wheel', scrollHandler);
+            Utils.animationQueue --;
+            if(Utils.animationQueue === 0){
+                $('body').unbind('wheel', scrollHandler);
+            }
         }
     }
     
