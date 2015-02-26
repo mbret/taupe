@@ -1,20 +1,31 @@
 var animations = [
     {
-        range: [0.01, 0.012],
+        range: [1, 1],
         name: 'animation 1',
-        timeout: 2000, // custom timeout
-        event: function(){
+        event: function(cb){
             console.log('animation 1');
-        },
-        callback: function(){
-            console.log('callback animation 1')
+            setTimeout(function(){
+                console.log('callback animation 1')
+                cb();
+            }, 2000);
+        }
+    },
+    {
+        range: [0.001, 0.003],
+        name: 'test son',
+        event: function(cb){
+            Sounds.playChosedSound(2, function(){
+                console.log('callback test son');
+                cb();
+            });
         }
     },
     {
         range: [1, 1],
         name: 'animation 2',
-        event: function(){
+        event: function(cb){
             console.log('animation 2');
+            cb();
         }
     },
 ];

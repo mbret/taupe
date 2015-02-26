@@ -4,8 +4,6 @@
     // default timeout
     var animationTimeout = 2000; // 2s
 
-
-
     // Main program
     // Bootstrap
     // Run
@@ -52,16 +50,19 @@
                     return;
                 }
                 else{
-                    var timeout = (animation.timeout) ? animation.timeout : animationTimeout;
+                    //var timeout = (animation.timeout) ? animation.timeout : animationTimeout;
                     Utils.pauseScroll();
-                    animation.event();
                     animation.played = true;
-                    setTimeout(function(){
+                    animation.event(function(){
                         Utils.resumeScroll();
-                        if(animation.callback){
-                            animation.callback();
-                        }
-                    }, timeout);
+                    });
+                    //animation.played = true;
+                    //setTimeout(function(){
+                    //    Utils.resumeScroll();
+                    //    if(animation.callback){
+                    //        animation.callback();
+                    //    }
+                    //}, timeout);
                     return;
                 }
             }

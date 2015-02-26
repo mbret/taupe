@@ -52,44 +52,34 @@ var scenes = [
         range: [0.46, 0.51]
     },
     {
-        name : 'p11',
-        bg: 'images/chemin/p11.png',
-        range: [0.51, 0.57]
-    },
-    {
         name : 'p12',
         bg: 'images/chemin/p12.png',
-        range: [0.57, 0.62]
-    },
-    {
-        name : 'p13',
-        bg: 'images/chemin/p13.png',
-        range: [0.62, 0.67]
+        range: [0.51, 0.57]
     },
     {
         name : 'p14',
         bg: 'images/chemin/p14.png',
-        range: [0.67, 0.72]
+        range: [0.57, 0.62]
     },
     {
         name : 'p15',
         bg: 'images/chemin/p15.png',
-        range: [0.72, 0.78]
+        range: [0.62, 0.67]
     },
     {
         name : 'p16',
         bg: 'images/chemin/p16.png',
-        range: [0.78, 0.82]
+        range: [0.67, 0.72]
     },
     {
         name : 'p17',
         bg: 'images/chemin/p17.png',
-        range: [0.82, 0.87]
+        range: [0.72, 0.86]
     },
     {
         name : 'p18',
         bg: 'images/chemin/p18.png',
-        range: [0.87, 0.92]
+        range: [0.86, 0.92]
     },
     {
         name : 'p19',
@@ -101,4 +91,14 @@ var scenes = [
         bg: 'images/chemin/blank.jpg',
         range: [1, 1]
     },
+    //{
+    //    name : 'p19',
+    //    bg: 'images/chemin/p19.png',
+    //    range: [0.92, 1]
+    //},
+    //{
+    //    name : 'offset',
+    //    bg: 'images/chemin/blank.jpg',
+    //    range: [1, 1]
+    //},
 ];

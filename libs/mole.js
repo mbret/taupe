@@ -29,9 +29,9 @@
                 
                 // special css for this behavior
                 if(positionToAffect.css){
-                    $elem.removeClass($elem.data('currentClass'));
+                    $elem.removeClass($elem.data('current-class'));
                     $elem.addClass(positionToAffect.css);
-                    $elem.data('currentClass', positionToAffect.css);
+                    $elem.data('current-class', positionToAffect.css);
                 }
                 
                 // special animation for this range

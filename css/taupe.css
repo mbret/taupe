@@ -11,3 +11,25 @@
 @keyframes play {
     100% { background-position: -1463px; }
 }
+
+
+.ground-clean{
+    background: url('../images/walk.png') no-repeat top left;
+    width: 371px;
+    height: 381px;
+}
+
+/*2dn scene*/
+/*taupe is angry and looking at the sky*/
+.angry{
+    background: url('../images/walk.png') no-repeat top left;
+    width: 371px;
+    height: 381px;
+}
+
+/*taupe get bird shit*/
+.bird-shit{
+    background: url('../images/walk.png') no-repeat top left;
+    width: 371px;
+    height: 381px;
+}
