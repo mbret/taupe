@@ -1,17 +1,17 @@
 var moleBehavior = [
     // no taupe
     {
-        range: [0, 0.025],
+        range: [0, 0.0017],
         css: 'invisible'
     },
     // taupe in ground
     {
-        range: [0.005, 0.007],
+        range: [0.0017, 0.0034],
         css: 'ground-clean'
     },
     // taupe walk scene 1 -> scene 2
     {
-        range: [0.007, 0.044],
+        range: [0.0034, 0.044],
         css: 'walk',
         animate: {
             behavior: { left: '15%' },

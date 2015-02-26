@@ -14,7 +14,7 @@
 
 
 .ground-clean{
-    background: url('../images/walk.png') no-repeat top left;
+    background: url('../images/taupe-ground-clean.png') no-repeat top left;
     width: 371px;
     height: 381px;
 }
@@ -22,7 +22,7 @@
 /*2dn scene*/
 /*taupe is angry and looking at the sky*/
 .angry{
-    background: url('../images/walk.png') no-repeat top left;
+    background: url('../images/tjambes.png') no-repeat top left;
     width: 371px;
     height: 381px;
 }
