@@ -53,6 +53,7 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
+    // horse finger
     {
         range: [0.0913, 0.0920],
         left: '40%',
@@ -65,6 +66,7 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
+    // horse sit
     {
         range: [0.115, 0.116],
         left: '40%',
@@ -96,7 +98,7 @@ var moleBehavior = [
         css: 'walk'
     },
     {
-        range: [0.15, 0.152],
+        range: [0.15, 0.164],
         animate: {
             behavior: { left: '10%' },
             timeout: 500
@@ -104,6 +106,7 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
+    // rabbit
     {
         range: [0.164, 0.166],
         left: '10%',
@@ -116,12 +119,14 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
+    // goat 1
     {
         range: [0.186, 0.187],
         left: '10%',
         bottom: '3%',
         css: 'goat12'
     },
+    // goat 12
     {
         range: [0.187, 0.189],
         left: '10%',
@@ -129,8 +134,49 @@ var moleBehavior = [
         css: 'goat1'
     },
     {
-        range: [0.189, 1],
+        range: [0.189, 0.190],
         left: '10%',
+        bottom: '3%',
+        css: 'walk'
+    },
+    {
+        range: [0.190, 0.191],
+        animate: {
+            behavior: { left: '-5%' },
+            timeout: 500
+        },
+        bottom: '3%',
+        css: 'walk'
+    },
+    // goat 2
+    {
+        range: [0.191, 0.1935],
+        left: '-5%',
+        bottom: '3%',
+        css: 'goat2'
+    },
+    {
+        range: [0.2037, 0.213],
+        animate: {
+            behavior: { left: '10%' },
+            timeout: 500
+        },
+        bottom: '3%',
+        css: 'walk'
+    },
+    // flies 1
+    {
+        range: [0.213, 0.215],
+        left: '10%',
+        bottom: '3%',
+        css: 'flies1'
+    },
+    {
+        range: [0.215, 0.217],
+        animate: {
+            behavior: { left: '20%' },
+            timeout: 500
+        },
         bottom: '3%',
         css: 'walk'
     },
