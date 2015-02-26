@@ -34,6 +34,16 @@
                     $elem.data('current-class', positionToAffect.css);
                 }
                 
+                // affect the correct left
+                if(positionToAffect.left){
+                    $elem.css("left", positionToAffect.left);
+                }
+
+                // affect the correct left
+                if(positionToAffect.bottom){
+                    $elem.css("bottom", positionToAffect.bottom);
+                }
+                
                 // special animation for this range
                 // played once only
                 if(positionToAffect.animate && positionToAffect.animate.played !== true){
