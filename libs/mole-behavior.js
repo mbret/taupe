@@ -2,16 +2,20 @@ var moleBehavior = [
     // no taupe
     {
         range: [0, 0.0017],
-        css: 'invisible'
+        css: 'invisible',
+        left: '15%',
+        bottom: '3%',
     },
     // taupe walk scene 1 -> scene 2
     {
         range: [0.0034, 0.044],
         css: 'walk',
-        animate: {
-            behavior: { left: '15%', bottom: '3%' },
-            timeout: 500
-        }
+        //animate: {
+        //    behavior: { left: '15%', bottom: '3%' },
+        //    timeout: 500
+        //}
+        left: '15%',
+        bottom: '3%',
     },
     // taupe is angry and look at the sky
     {
@@ -172,12 +176,54 @@ var moleBehavior = [
         css: 'flies1'
     },
     {
-        range: [0.215, 0.217],
+        range: [0.215, 0.2206],
         animate: {
             behavior: { left: '20%' },
             timeout: 500
         },
         bottom: '3%',
         css: 'walk'
+    },
+    {
+        range: [0.2206, 0.22],
+        left: '20%',
+        bottom: '3%',
+        css: 'flies2'
+    },
+    {
+        range: [0.22, 0.222],
+        left: '20%',
+        bottom: '3%',
+        css: 'walk'
+    },
+    {
+        range: [0.222, 0.224],
+        left: '20%',
+        bottom: '3%',
+        css: 'flies2'
+    },
+    {
+        range: [0.224, 0.246],
+        left: '20%',
+        bottom: '3%',
+        css: 'walk'
+    },
+    {
+        range: [0.246, 0.248],
+        left: '20%',
+        bottom: '3%',
+        css: 'dog1'
+    },
+    {
+        range: [0.248, 0.26],
+        left: '20%',
+        bottom: '3%',
+        css: 'walk'
+    },
+    {
+        range: [0.26, 1],
+        left: '20%',
+        bottom: '3%',
+        css: 'finish'
     },
 ];
