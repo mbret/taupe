@@ -39,7 +39,8 @@ var animations = [
             $(".anim3").addClass("animois");
             setTimeout(function(){
                 $(".anim3").addClass("hide");
-            }, 2000);
+                $(".oiseaufront").removeClass("hide");
+            }, 800);
             cb();
         }
     },
