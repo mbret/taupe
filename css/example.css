@@ -84,11 +84,17 @@ h1
     background-size: cover;
 }
 .caca1{
-  background: url('../images/crotte1.png') no-repeat top left; width: 221px; height: 897px;
+    border:1px solid red;
+  background: url('../images/crotte1.png') no-repeat top left; 
+    width: 221px;
+    height: 897px;
   animation: playcrotte1 1.8s steps(9);
   -webkit-animation: playcrotte1 1.8s steps(9);
-  left: 11%;
-  top: -350px;
+    background-size: cover;
+    /*width: 50px;*/
+    /*height: 800px;*/
+    left: 11%;
+  /*top: -350px;*/
 }
 @keyframes playcrotte1 {
    100% { background-position: 0 -8153px; }
