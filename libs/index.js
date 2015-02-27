@@ -3,10 +3,10 @@
     
     Sounds.deactive = false;
     HeadMove.onLeftScroll = function(){
-        Utils.scroll();
+        Utils.scrollLeft();
     };
     HeadMove.onRightScroll = function(){
-        Utils.scroll();
+        Utils.scrollRight();
     };
     
     // default timeout
@@ -97,11 +97,19 @@
             }
         },
         
-        scroll: function(){
+        scrollLeft: function(){
             var scrollSpeed = 100; // should simulate wheel scroll
             
             if( Utils.scrollState === 'enabled' ){
                 window.scrollTo(0,(window.scrollY + scrollSpeed));
+            }
+        },
+
+        scrollRight: function(){
+            var scrollSpeed = 100; // should simulate wheel scroll
+
+            if( Utils.scrollState === 'enabled' ){
+                window.scrollTo(0,(window.scrollY - scrollSpeed));
             }
         }
     }
