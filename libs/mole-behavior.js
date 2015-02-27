@@ -210,7 +210,7 @@ var moleBehavior = [
     {
         range: [0.245, 0.246],
         animate: {
-            behavior: { left: '60%' },
+            behavior: { left: '70%' },
             timeout: 500
         },
         bottom: '3%',
@@ -218,7 +218,7 @@ var moleBehavior = [
     },
     {
         range: [0.246, 0.248],
-        left: '60%',
+        left: '70%',
         bottom: '3%',
         css: 'dog1'
     },

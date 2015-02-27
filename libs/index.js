@@ -9,9 +9,6 @@
     //    Utils.scrollRight();
     //};
 
-    // default timeout
-    var animationTimeout = 2000; // 2s
-
     // Main program
     // Bootstrap
     // Run

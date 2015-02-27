@@ -407,7 +407,7 @@
             annyang.start();
             annyang.debug(true);
             annyang.addCallback('resultNoMatch', function(){
-                Sounds.play(errorMessage);
+                Sounds.play(errorMessage, function(){});
             });
         }
     }
