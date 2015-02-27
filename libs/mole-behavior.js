@@ -4,7 +4,7 @@ var moleBehavior = [
         range: [0, 0.0051],
         css: 'invisible',
         left: '15%',
-        bottom: '3%',
+        bottom: '3%'
     },
     // taupe walk scene 1 -> scene 2
     {
@@ -31,7 +31,6 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
-    // move a bit forward to avoid bird shit
     {
         range: [0.0795, 0.096],
         animate: {
@@ -170,40 +169,40 @@ var moleBehavior = [
     },
     // flies 1
     {
-        range: [0.213, 0.215],
+        range: [0.213, 0.214],
         left: '10%',
         bottom: '3%',
         css: 'flies1'
     },
+    //{
+    //    range: [0.215, 0.2206],
+    //    animate: {
+    //        behavior: { left: '20%' },
+    //        timeout: 500
+    //    },
+    //    bottom: '3%',
+    //    css: 'walk'
+    //},
     {
-        range: [0.215, 0.2206],
-        animate: {
-            behavior: { left: '20%' },
-            timeout: 500
-        },
-        bottom: '3%',
-        css: 'walk'
-    },
-    {
-        range: [0.2206, 0.22],
+        range: [0.214, 0.216],
         left: '20%',
         bottom: '3%',
         css: 'flies2'
     },
     {
-        range: [0.22, 0.222],
+        range: [0.216, 0.222],
         left: '20%',
         bottom: '3%',
         css: 'walk'
     },
+    //{
+    //    range: [0.222, 0.224],
+    //    left: '20%',
+    //    bottom: '3%',
+    //    css: 'flies2'
+    //},
     {
-        range: [0.222, 0.224],
-        left: '20%',
-        bottom: '3%',
-        css: 'flies2'
-    },
-    {
-        range: [0.224, 0.246],
+        range: [0.222, 0.246],
         left: '20%',
         bottom: '3%',
         css: 'walk'

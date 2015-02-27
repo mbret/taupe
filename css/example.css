@@ -231,3 +231,20 @@ h1
   z-index: 1;
 }
 .hide{ display : none;}
+
+
+.end-game{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: bisque;
+    z-index: 99999;
+    font-size: 40px;
+    color: black;
+    text-align:center;
+    padding:10px; /* espace interne du conteneur */
+}
+.end-game .bloc {
+    margin-top: 300px;
+}

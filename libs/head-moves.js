@@ -1,14 +1,17 @@
 var maxX = 0;
 var minX = 0;
 var caca = false;
-
 var teteADroiteDetecte = false;
 var teteAGaucheDetecte = false;
-
 var teteADroite = false;
 var teteAGauche = false;
-
 var VITESSE_SCROLL = 20;
+var timerSecoue=setInterval("resetX()", 1000);
+var videoInput = document.getElementById('vid');
+var canvasInput = document.getElementById('compare');
+var canvasOverlay = document.getElementById('overlay')
+var debugOverlay = document.getElementById('debug');
+var overlayContext = canvasOverlay.getContext('2d');
 
 var HeadMove = {
     onLeftScroll: null,
@@ -51,13 +54,6 @@ function resetX() {
        caca = false;
    }
 
-var timerSecoue=setInterval("resetX()", 1000);
-
-var videoInput = document.getElementById('vid');
-var canvasInput = document.getElementById('compare');
-var canvasOverlay = document.getElementById('overlay')
-var debugOverlay = document.getElementById('debug');
-var overlayContext = canvasOverlay.getContext('2d');
 canvasOverlay.style.position = "absolute";
 canvasOverlay.style.top = '0px';
 canvasOverlay.style.zIndex = '100001';
@@ -106,4 +102,4 @@ document.addEventListener("headtrackingEvent", function( event ) {
     }
 });
 
-Window.HeadMove = HeadMove;
+window.HeadMove = HeadMove;

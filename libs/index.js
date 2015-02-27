@@ -1,13 +1,19 @@
 (function(){
    'use strict';
     
+    //Sounds.ask("Qui est le plus beau ?", "maxime", "Mauvaise réponse", function(){
+    //    Sounds.play("Bien joué", function(){
+    //        $('.end-game').css('visibility', 'visible');
+    //    });
+    //});
+    
     Sounds.deactive = true;
-    HeadMove.onLeftScroll = function(){
-        Utils.scrollLeft();
-    };
-    HeadMove.onRightScroll = function(){
-        Utils.scrollRight();
-    };
+    //HeadMove.onLeftScroll = function(){
+    //    Utils.scrollLeft();
+    //};
+    //HeadMove.onRightScroll = function(){
+    //    Utils.scrollRight();
+    //};
     
     // default timeout
     var animationTimeout = 2000; // 2s
@@ -18,6 +24,8 @@
     // behavior
     (function($){
 
+
+        
         var mole = new Mole( $('#taupe'), moleBehavior );
         var ground = new Ground( $('#ground'), scenes);
 
@@ -84,7 +92,6 @@
             Utils.animationQueue ++;
             $('body').bind('wheel', scrollHandler);
             Utils.scrollState = 'disabled';
-            
         },
         
         resumeScroll: function(){

@@ -1,64 +1,6 @@
 (function(){
     'use strict';
 
-    function playSound() {
-        var a = new Audio('http://vaas.acapela-group.com/Services/Streamer.ogg?req_voice=antoine8k&req_text=hello world&cl_login=EVAL_VAAS&cl_app=EVAL_2267118&cl_pwd=rqdlg7j0');
-        a.play();
-    }
-
-    function playChosedSound(page, mainCallback) {
-
-        if( Sounds.deactive ){
-            console.log('sound deactivated');
-            return mainCallback();
-        }
-        
-        var obj = jsonfile.dialog;
-        var adress = 'http://vaas.acapela-group.com/Services/Streamer.ogg?req_voice=';
-        var text = '&req_text=';
-        var log = '&cl_login=EVAL_VAAS&cl_app=EVAL_2267118&cl_pwd=rqdlg7j0';
-        var toSay;
-
-        for (var i = 0; i < obj.length; i++){
-            // look for the entry with a matching `code` value
-            if (obj[i].page == page){
-                toSay = obj[i].texts;
-            }
-        }
-
-        var plays = [];
-
-        for (var i = 0; i < toSay.length; i++){
-
-            (function(j){
-                plays.push(function(cb){
-                    console.log(j);
-                    var voice = toSay[j].char;
-                    var blabla = toSay[j].text;
-                    var listvoice = jsonfile.voices;
-                    var toHear;
-
-
-                    for (var i = 0; i < listvoice.length; i++){
-                        // look for the entry with a matching `code` value
-                        if (listvoice[i].char == voice){
-                            toHear = listvoice[i].voice;
-                        }
-                    }
-                    var a = new Audio(adress + toHear +  text + blabla + log);
-                    //var a = new Audio('http://vaas.acapela-group.com/Services/Streamer.ogg?req_voice=alice8k&req_text=Mais c"est degoutant&cl_login=EVAL_VAAS&cl_app=EVAL_2267118&cl_pwd=rqdlg7j0');
-                    a.addEventListener("ended", function() { cb(); }, true);
-                    a.play();
-                });
-            })(i);
-
-        }
-
-        async.series(plays,function(error){
-            mainCallback();
-        });
-    }
-
     var jsonfile = {
         "voices": [
             {
@@ -386,11 +328,105 @@
         ]
     };
     
+    var obj = jsonfile.dialog;
+    var address = 'http://vaas.acapela-group.com/Services/Streamer.ogg?req_voice=';
+    var text = '&req_text=';
+    var log = '&cl_login=EVAL_VAAS&cl_app=EVAL_2267118&cl_pwd=rqdlg7j0';
+    var toSay;
+    
+    function playSound() {
+        var a = new Audio('http://vaas.acapela-group.com/Services/Streamer.ogg?req_voice=antoine8k&req_text=hello world&cl_login=EVAL_VAAS&cl_app=EVAL_2267118&cl_pwd=rqdlg7j0');
+        a.play();
+    }
+
+    function playChosedSound(page, mainCallback) {
+
+        if( Sounds.deactive ){
+            console.log('sound deactivated');
+            return mainCallback();
+        }
+        
+        for (var i = 0; i < obj.length; i++){
+            // look for the entry with a matching `code` value
+            if (obj[i].page == page){
+                toSay = obj[i].texts;
+            }
+        }
+
+        var plays = [];
+
+        for (var i = 0; i < toSay.length; i++){
+
+            (function(j){
+                plays.push(function(cb){
+                    console.log(j);
+                    var voice = toSay[j].char;
+                    var blabla = toSay[j].text;
+                    var listvoice = jsonfile.voices;
+                    var toHear;
+
+                    for (var i = 0; i < listvoice.length; i++){
+                        // look for the entry with a matching `code` value
+                        if (listvoice[i].char == voice){
+                            toHear = listvoice[i].voice;
+                        }
+                    }
+                    var a = new Audio(address + toHear +  text + blabla + log);
+                    //var a = new Audio('http://vaas.acapela-group.com/Services/Streamer.ogg?req_voice=alice8k&req_text=Mais c"est degoutant&cl_login=EVAL_VAAS&cl_app=EVAL_2267118&cl_pwd=rqdlg7j0');
+                    a.addEventListener("ended", function() { cb(); }, true);
+                    a.play();
+                });
+            })(i);
+
+        }
+
+        async.series(plays,function(error){
+            mainCallback();
+        });
+    }
+
+    function ask(question, match, errorMessage, cb){
+        if (annyang){
+            // Let's define our first command. First the text we expect, and then the function it should call
+
+            annyang.setLanguage('fr-FR');
+
+            var commands = {};
+            commands[match] = function () {
+                annyang.abort();
+                return cb(true);
+            };
+
+            // Add our commands to annyang
+            annyang.addCommands(commands);
+
+            var a = new Audio(address + "margauxhappy8k" +  text + question + log);
+            a.play();
+            
+            // Start listening. You can call this here, or attach this call to an event, button, etc.
+            annyang.start();
+            annyang.debug(true);
+            annyang.addCallback('resultNoMatch', function(){
+                Sounds.play(errorMessage);
+            });
+        }
+    }
+    
+    function play(sentence, cb){
+        var a = new Audio(address + "margauxhappy8k" +  text + sentence + log);
+        a.addEventListener("ended", function(){
+            cb();
+        }, true);
+        a.play();
+    }
+    
     // Export library
     window.Sounds = {
         playSound: playSound,
         playChosedSound: playChosedSound,
-        deactive : false
+        deactive : false,
+        ask: ask,
+        play: play
     }
     
 })();

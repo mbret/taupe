@@ -20,13 +20,13 @@ var animations = [
                 $(".anim2").addClass("venere");
                 setTimeout(function(){
                     $(".anim2").addClass("ground-clean");
-                    //Sounds.playChosedSound(2, function(){
+                    Sounds.playChosedSound(2, function(){
                         $(".anim2").removeClass("ground-clean");
                         $(".anim2").addClass("hide");
                         $("#taupe").addClass("walk");
 
                         cb();
-                    //});
+                    });
                 }, 3000);
             }, 1800);
         }
