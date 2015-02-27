@@ -105,12 +105,16 @@
                 "texts": [
                     {
                         "char": "T",
-                        "text": "Hey batard, c'est toi qui m'a chié sur la gueule ?"
+                        "text": "Hey batard, c'est toi qui m'a chié sur la gueule ? zzbraa"
                     },
                     {
                         "char": "N",
-                        "text": "Comme tous les soirs, la petite taupe sortit de terre son museau pointu, juste pour voir si le soleil avait disparu. Et voici ce qui arriva. C'etait rond et marron, aussi long qu'une saucisse, et le plus horrible fut que ca lui tomba exactement sur la tete, sploutsch !"
-                    }
+                        "text": "Comme tous les matin, la petite taupe sortit de terre son museau pointu. Et voici ce qui arriva. C'etait rond et marron, aussi long qu'une saucisse, et le plus horrible fut que ca lui tomba exactement sur la tête, sploutsch !"
+                    },
+                    {
+                        "char": "T",
+                        "text": "J'vous aime putain !"
+                    },
                 ]
             },
 
@@ -127,7 +131,7 @@
                     },
                     {
                         "char": "T",
-                        "text": "qui a ose me faire ca sur la tete ?"
+                        "text": "qui a ose me faire ca sur la tête ?"
                     },
                     {
                         "char": "N",
@@ -149,7 +153,7 @@
                     },
                     {
                         "char": "T",
-                        "text": "est-ce toi qui m'a fait sur la tete ?"
+                        "text": "est-ce toi qui m'a fait sur la tête ?"
                     }
                 ]
             },
@@ -173,7 +177,7 @@
                 "texts": [
                     {
                         "char": "T",
-                        "text": "He le cheval, est-ce toi qui m'as fait sur la tete ?"
+                        "text": "He le cheval, est-ce toi qui m'as fait sur la tête ?"
                     }
                 ]
             },
@@ -187,7 +191,7 @@
                     },
                     {
                         "char": "N",
-                        "text": "Et pouf, pouf, pouf, pouf, pouf, il bombarda l'herbe de cinq gros crottins. La petite taupe fut drolement impressionnee"
+                        "text": "Et pouf, il bombarda l'herbe d'un bon, gros, crottin. La petite taupe fut drôlement impressionnée"
                     }
                 ]
             },
@@ -197,7 +201,7 @@
                 "texts": [
                     {
                         "char": "T",
-                        "text": "Hola ! Le lievre ! est-ce toi qui m'as fait sur la tete ?"
+                        "text": "Hola ! Le lievre ! est-ce toi qui m'as fait sur la tête ?"
                     }
                 ]
             },
@@ -211,7 +215,7 @@
                     },
                     {
                         "char": "N",
-                        "text": "Et ratatatata ! Cinquante petits haricots tout ronds petarderent aux oreilles de la petite taupe"
+                        "text": "Et zzbraa ! Cinquante petits haricots tout ronds petardèrent aux oreilles de la petite taupe"
                     }
                 ]
             },
@@ -221,7 +225,7 @@
                 "texts": [
                     {
                         "char": "T",
-                        "text": "Dis-moi la chevre ! est-ce toi qui m'as fait sur la tete ?"
+                        "text": "Dis-moi la chèvre ! est-ce toi qui m'as fait sur la tête ?"
                     }
                 ]
             },
@@ -245,7 +249,7 @@
                 "texts": [
                     {
                         "char": "T",
-                        "text": "Reponds, la vache ! est-ce toi qui m'as fait sur la tete ?"
+                        "text": "Reponds, la vache ! est-ce toi qui m'as fait sur la tête ?"
                     }
                 ]
             },
@@ -259,7 +263,7 @@
                     },
                     {
                         "char": "N",
-                        "text": "Et ssplaoutsch ! Une enorme bouse verdatre s'ecrabouilla mollement sur le sol. Diable ! pensa-t-elle, c'est une chance que cette chose-la ne me soit pas tombee sur la tete !"
+                        "text": "Et ssplaoutsch ! Une enorme bouse verdatre s'ecrabouilla mollement sur le sol. Diable ! pensa-t-elle, c'est une chance que cette chose-la ne me soit pas tombee sur la tête !"
                     }
                 ]
             },
@@ -269,7 +273,7 @@
                 "texts": [
                     {
                         "char": "T",
-                        "text": "Cochon, ecoute-moi ! est-ce toi qui m'as fait sur la tete ?"
+                        "text": "Cochon, écoute-moi ! est-ce toi qui m'as fait sur la tête ?"
                     }
                 ]
             },
@@ -317,7 +321,7 @@
                     },
                     {
                         "char": "T",
-                        "text": "Qui a bien pu me faire sur la tete, mesdames ?"
+                        "text": "Qui a bien pu me faire sur la tête, mesdames ?"
                     }
                 ]
             },
@@ -327,11 +331,11 @@
                 "texts": [
                     {
                         "char": "N",
-                        "text": "Les deux mouches n'hesiterent pas longtemps."
+                        "text": "Les deux mouches n'hesitèrent pas longtemps."
                     },
                     {
                         "char": "MO",
-                        "text": "Aucun doute, ma chere, c'est un chien."
+                        "text": "Aucun doute, ma chère, c'est un chien."
                     }
                 ]
             },
@@ -341,7 +345,7 @@
                 "texts": [
                     {
                         "char": "N",
-                        "text": "Cette fois, la taupe le tenait, le gros malpropre qui avait fait sur sa tete"
+                        "text": "Cette fois, la taupe le tenait, le gros malpropre qui avait fait sur sa tête"
                     }
                 ]
             },
@@ -351,7 +355,7 @@
                 "texts": [
                     {
                         "char": "N",
-                        "text": "Jean Henri, le chien du boucher ! Sa vengeance allait etre terrible !"
+                        "text": "Jean Henri, le chien du boucher ! Sa vengeance allait être terrible !"
                     }
                 ]
             },
@@ -371,11 +375,11 @@
                 "texts": [
                     {
                         "char": "N",
-                        "text": "Voila ! Justice etait faite !"
+                        "text": "Voila ! Justice était faite !"
                     },
                     {
                         "char": "N",
-                        "text": "Radieuse, la petite taupe, s'enfonca a nouveau dans les entrailles de la terre, la ou, assurement, personne au monde ne pouvait lui faire sur la tete."
+                        "text": "Radieuse, la petite taupe, s'enfonca a nouveau dans les entrailles de la terre, la ou, assurément, personne au monde ne pouvait lui faire sur la tête."
                     }
                 ]
             }

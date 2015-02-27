@@ -43,7 +43,6 @@ h1
   z-index: 1;
   width: 3000px;
 }
-
 .middle
 {
   z-index: 500;
@@ -94,16 +93,15 @@ h1
 .anim4{ left: 0;}
 .anim4{ left: 0;}
 
-
 .oiseaufront{ background: url('../images/animois.png') no-repeat -558px -7056px; width: 722px; height: 275px; left:51%; }
 .oiseauback{ background: url('../images/culois.png') no-repeat 0 -3784px; width: 533px; height: 221px; }
 .caca1{
     /*border:1px solid red;*/
-  background: url('../images/crotte1.png') no-repeat top left; 
+    background: url('../images/crotte1.png') no-repeat top left;
     width: 221px;
     height: 897px;
-  animation: playcrotte1 1.8s steps(9);
-  -webkit-animation: playcrotte1 1.8s steps(9);
+    animation: playcrotte1 1.8s steps(9);
+    -webkit-animation: playcrotte1 1.8s steps(9);
 }
 @keyframes playcrotte1 {
    100% { background-position: 0 -8153px; }
@@ -116,7 +114,6 @@ h1
   background: url('../images/cacaTaupe.png') no-repeat top left; width: 1280px; height: 895px;
   animation: playcacataupe .8s steps(4) ;
   -webkit-animation: playcacataupe .8s steps(4);
-
 }
 @keyframes playcacataupe {
    100% { background-position: 0 -8153px; }

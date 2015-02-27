@@ -52,19 +52,11 @@
                     return;
                 }
                 else{
-                    //var timeout = (animation.timeout) ? animation.timeout : animationTimeout;
                     Utils.pauseScroll();
                     animation.played = true;
                     animation.event(function(){
                         Utils.resumeScroll();
                     });
-                    //animation.played = true;
-                    //setTimeout(function(){
-                    //    Utils.resumeScroll();
-                    //    if(animation.callback){
-                    //        animation.callback();
-                    //    }
-                    //}, timeout);
                     return;
                 }
             }
