@@ -33,6 +33,9 @@ h1
   bottom: 0;
   left: 0;
 }
+#ground img{
+  margin-bottom: -3px;
+}
 
 /**
   * z-index ordering of the different layers, do this for your layers,
@@ -87,7 +90,7 @@ h1
 .anim2{ left: -13%; top: -50px;}
 .anim3{ left: 11%;}
 .anim4{ left: 0;}
-.anim4{ left: 0;}
+.anim5{ top:-37%;}
 .anim4{ left: 0;}
 .anim4{ left: 0;}
 .anim4{ left: 0;}
@@ -97,6 +100,19 @@ h1
 
 .oiseaufront{ background: url('../images/animois.png') no-repeat -558px -7056px; width: 722px; height: 275px; left:51%; }
 .oiseauback{ background: url('../images/culois.png') no-repeat 0 -3784px; width: 533px; height: 221px; }
+.cheval {background: url('../images/chev.png') no-repeat 0 -2667px; width: 415px; height: 663px; top:-37%;}
+.piedchev {background: url('../images/piedcheval.png') no-repeat 0 0; width: 333px; height: 800px; top:-150%;}
+.crottechev {background: url('../images/cacachev.png') no-repeat -541px -921px; width: 178px; height: 183px; top:55%; left: 20%;}
+.lapin {background: url('../images/lapin1.png') no-repeat 0 0; width: 599px; height: 716px; left: 100%}
+.lapin2 {background: url('../images/lapin2.png') no-repeat 0 0; width: 894px; height: 738px; left: 100%}
+.crottelap {background: url('../images/cacalap.png') no-repeat -908px -1505px; width: 24px; height: 37px; float: left;}
+.animation.tascrotte { left: 60%; top: 87%; }
+.flies { background: url('../images/flies.png') no-repeat 0 0; width: 403px; height: 382px; left: 100%; top: 47%; }
+.crotteTaupe{background: url('../images/cacaTaupe.png') no-repeat -808px -1893px; width: 45px; height: 30px;}
+.crottepig { background: url('../images/crotteois.png') no-repeat 0 0; width: 214px; height: 98px; left: 40%; top: -10%; }
+
+
+
 .caca1{
     border:1px solid red;
   background: url('../images/crotte1.png') no-repeat top left; 
@@ -125,35 +141,12 @@ h1
   from { background-position: 0 0; }
   to { background-position: 0 -8153px; }
 }
-.cacacochon{
-  background: url('../images/cacacochon.png') no-repeat top left; width: 1280px; height: 897px;
-  animation: playcacacochon .8s steps(7);
-  -webkit-animation: playcacacochon .8s steps(7);
-}
-@keyframes playcacacochon {
-   100% { background-position: 0 -6339px; }
-}
-@-webkit-keyframes playcacacochon {
-  from { background-position: 0 0; }
-  to { background-position: 0 -6339px; }
-}
-.cacachevre{
-  background: url('../images/cacachevre.png') no-repeat top left; width: 1280px; height: 884px;
-  animation: playcacachevre .8s steps(7);
-  -webkit-animation: playcacachevre .8s steps(7);
-}
-@keyframes playcacachevre {
-   100% { background-position: 0 -6248px; }
-}
-@-webkit-keyframes playcacachevre {
-  from { background-position: 0 0; }
-  to { background-position: 0 -6248px; }
-}
 
 .cacalap{
   background: url('../images/cacalap.png') no-repeat top left; width: 1280px; height: 928px;
-  animation: playcacalap .8s steps(6);
-  -webkit-animation: playcacalap .8s steps(6);
+  animation: playcacalap 1s steps(6) infinite;
+  -webkit-animation: playcacalap 1s steps(6) infinite;
+  left: -3%
 }
 @keyframes playcacalap {
    100% { background-position: 0 -5618px; }
@@ -165,8 +158,10 @@ h1
 
 .cacachev{
   background: url('../images/cacachev.png') no-repeat top left; width: 1280px; height: 928px;
-  animation: playcacachev .8s steps(9);
-  -webkit-animation: playcacachev .8s steps(9);
+  animation: playcacachev 1s steps(9);
+  -webkit-animation: playcacachev 1s steps(9);
+  left:-15%;
+  top:-15%;
 }
 @keyframes playcacachev {
    100% { background-position: 0 -8243px; }
@@ -178,8 +173,8 @@ h1
 
 .chev{
   background: url('../images/chev.png') no-repeat top left; width: 1280px; height: 879px;
-  animation: playchev .8s steps(4);
-  -webkit-animation: playchev .8s steps(4);
+  animation: playchev 1s steps(4);
+  -webkit-animation: playchev 1s steps(4);
 }
 @keyframes playchev {
    100% { background-position: 0 -3546px; }
@@ -191,8 +186,8 @@ h1
 
 .culois{
   background: url('../images/culois.png') no-repeat top left; width: 1280px; height: 936px;
-  animation: playculois .8s steps(4);
-  -webkit-animation: playculois .8s steps(4);
+  animation: playculois 1s steps(4);
+  -webkit-animation: playculois 1s steps(4);
 }
 @keyframes playculois {
    100% { background-position: 0 -3546px; }

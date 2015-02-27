@@ -197,7 +197,7 @@
                 "page": "8",
                 "texts": [
                     {
-                        "char": "L",
+                        "char": "LI",
                         "text": "Moi ? Mais non voyons ! Moi, je fais comme ca !"
                     },
                     {

@@ -106,7 +106,7 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
-    // rabbit
+    // rabbit1
     {
         range: [0.164, 0.166],
         left: '10%',
@@ -119,14 +119,8 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
-    // goat 1
-    {
-        range: [0.186, 0.187],
-        left: '10%',
-        bottom: '3%',
-        css: 'goat12'
-    },
-    // goat 12
+    
+    // rabbit2
     {
         range: [0.187, 0.189],
         left: '10%',
@@ -151,9 +145,7 @@ var moleBehavior = [
     // goat 2
     {
         range: [0.191, 0.1935],
-        left: '-5%',
-        bottom: '3%',
-        css: 'goat2'
+        
     },
     {
         range: [0.2037, 0.213],
