@@ -7,7 +7,7 @@
     //    });
     //});
     
-    Sounds.deactive = true;
+    Sounds.deactive = false;
     //HeadMove.onLeftScroll = function(){
     //    Utils.scrollLeft();
     //};
