@@ -2,6 +2,12 @@
    'use strict';
     
     Sounds.deactive = true;
+    HeadMove.onLeftScroll = function(){
+        Utils.scroll();
+    };
+    HeadMove.onRightScroll = function(){
+        Utils.scroll();
+    };
     
     // default timeout
     var animationTimeout = 2000; // 2s
@@ -37,7 +43,7 @@
         });
     }(jQuery));
 
-
+    
     /**
      * Throw animation
      * @param percent
@@ -68,17 +74,34 @@
         e.stopPropagation();
     };
     window.Utils = {
+        
         animationQueue: 0,
+        scrollState: 'enabled',
+        
         pauseScroll: function(){
             if(Utils.animationQueue < 0) throw Error("Invalid animationQueue", Utils.animationQueue);
+            
             Utils.animationQueue ++;
             $('body').bind('wheel', scrollHandler);
+            Utils.scrollState = 'disabled';
+            
         },
+        
         resumeScroll: function(){
             if(Utils.animationQueue <= 0) throw Error("Invalid animationQueue", Utils.animationQueue);
+            
             Utils.animationQueue --;
             if(Utils.animationQueue === 0){
                 $('body').unbind('wheel', scrollHandler);
+                Utils.scrollState = 'enabled';
+            }
+        },
+        
+        scroll: function(){
+            var scrollSpeed = 100; // should simulate wheel scroll
+            
+            if( Utils.scrollState === 'enabled' ){
+                window.scrollTo(0,(window.scrollY + scrollSpeed));
             }
         }
     }
