@@ -213,7 +213,7 @@ var animations = [
         }
     },
     {
-        range: [0.222, 0.224],
+        range: [0.214, 0.216],
         name: 'animation 10bis',
         event: function(cb){
             Sounds.playChosedSound(16, function(){
@@ -254,7 +254,11 @@ var animations = [
         name: 'animation 12',
         event: function(cb){
             Sounds.playChosedSound(20, function(){
-
+                Sounds.ask("Alors, qui était le responsable selon toi ?", "Le chien", "Mauvaise réponse, essai encore !", function(){
+                    Sounds.play("Bien joué", function(){
+                        $('.end-game').css('visibility', 'visible');
+                    });
+                });
             });
         }
     },

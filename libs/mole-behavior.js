@@ -202,14 +202,23 @@ var moleBehavior = [
     //    css: 'flies2'
     //},
     {
-        range: [0.222, 0.246],
+        range: [0.222, 0.245],
         left: '20%',
         bottom: '3%',
         css: 'walk'
     },
     {
+        range: [0.245, 0.246],
+        animate: {
+            behavior: { left: '60%' },
+            timeout: 500
+        },
+        bottom: '3%',
+        css: 'walk'
+    },
+    {
         range: [0.246, 0.248],
-        left: '20%',
+        left: '60%',
         bottom: '3%',
         css: 'dog1'
     },

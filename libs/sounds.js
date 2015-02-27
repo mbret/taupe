@@ -46,10 +46,6 @@
                 "page": "1",
                 "texts": [
                     {
-                        "char": "T",
-                        "text": "Hey batard, c'est toi qui m'a chié sur la gueule ? zzbraa"
-                    },
-                    {
                         "char": "N",
                         "text": "Comme tous les matin, la petite taupe sortit de terre son museau pointu. Et voici ce qui arriva. C'etait rond et marron, aussi long qu'une saucisse, et le plus horrible fut que ca lui tomba exactement sur la tête, sploutsch !"
                     },
@@ -331,7 +327,7 @@
     var obj = jsonfile.dialog;
     var address = 'http://vaas.acapela-group.com/Services/Streamer.ogg?req_voice=';
     var text = '&req_text=';
-    var log = '&cl_login=EVAL_VAAS&cl_app=EVAL_2267118&cl_pwd=rqdlg7j0';
+    var log = '&cl_login=EVAL_VAAS&cl_app=EVAL_1011229&cl_pwd=2cihvxi0';
     var toSay;
     
     function playSound() {

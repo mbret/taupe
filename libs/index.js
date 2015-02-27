@@ -1,13 +1,7 @@
 (function(){
    'use strict';
 
-    //Sounds.ask("Qui est le plus beau ?", "maxime", "Mauvaise réponse", function(){
-    //    Sounds.play("Bien joué", function(){
-    //        $('.end-game').css('visibility', 'visible');
-    //    });
-    //});
-    
-    Sounds.deactive = true;
+    Sounds.deactive = false;
     //HeadMove.onLeftScroll = function(){
     //    Utils.scrollLeft();
     //};
