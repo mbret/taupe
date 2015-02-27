@@ -1,17 +1,21 @@
 var moleBehavior = [
     // no taupe
     {
-        range: [0, 0.0017],
-        css: 'invisible'
+        range: [0, 0.0051],
+        css: 'invisible',
+        left: '15%',
+        bottom: '3%'
     },
     // taupe walk scene 1 -> scene 2
     {
-        range: [0.0034, 0.044],
+        range: [0.0051, 0.044],
         css: 'walk',
-        animate: {
-            behavior: { left: '15%', bottom: '3%' },
-            timeout: 500
-        }
+        //animate: {
+        //    behavior: { left: '15%', bottom: '3%' },
+        //    timeout: 500
+        //}
+        left: '15%',
+        bottom: '3%',
     },
     // taupe is angry and look at the sky
     {
@@ -37,7 +41,7 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
-    // mole get bird shit
+    
     {
         range: [0.0811, 0.0828],
         left: '50%',
@@ -106,7 +110,7 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
-    // rabbit1
+    // rabbit
     {
         range: [0.164, 0.166],
         left: '10%',
@@ -119,36 +123,44 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
-    
-    // rabbit2
+    // goat 1
     {
-        range: [0.187, 0.189],
+        range: [0.186, 0.187],
         left: '10%',
         bottom: '3%',
         css: 'goat1'
     },
-    {
-        range: [0.189, 0.190],
-        left: '10%',
-        bottom: '3%',
-        css: 'walk'
-    },
-    {
-        range: [0.190, 0.191],
-        animate: {
-            behavior: { left: '-5%' },
-            timeout: 500
-        },
-        bottom: '3%',
-        css: 'walk'
-    },
+    // goat 12
+    //{
+    //    range: [0.187, 0.189],
+    //    left: '10%',
+    //    bottom: '3%',
+    //    css: 'goat1'
+    //},
+    //{
+    //    range: [0.189, 0.190],
+    //    left: '10%',
+    //    bottom: '3%',
+    //    css: 'walk'
+    //},
+    //{
+    //    range: [0.190, 0.191],
+    //    animate: {
+    //        behavior: { left: '-5%' },
+    //        timeout: 500
+    //    },
+    //    bottom: '3%',
+    //    css: 'walk'
+    //},
     // goat 2
+    //{
+    //    range: [0.191, 0.1935],
+    //    left: '-5%',
+    //    bottom: '3%',
+    //    css: 'goat2'
+    //},
     {
-        range: [0.191, 0.1935],
-        
-    },
-    {
-        range: [0.2037, 0.213],
+        range: [0.187, 0.213],
         animate: {
             behavior: { left: '10%' },
             timeout: 500
@@ -164,12 +176,54 @@ var moleBehavior = [
         css: 'flies1'
     },
     {
-        range: [0.215, 0.217],
+        range: [0.215, 0.2206],
         animate: {
             behavior: { left: '20%' },
             timeout: 500
         },
         bottom: '3%',
         css: 'walk'
+    },
+    {
+        range: [0.2206, 0.22],
+        left: '20%',
+        bottom: '3%',
+        css: 'flies2'
+    },
+    {
+        range: [0.22, 0.222],
+        left: '20%',
+        bottom: '3%',
+        css: 'walk'
+    },
+    {
+        range: [0.222, 0.224],
+        left: '20%',
+        bottom: '3%',
+        css: 'flies2'
+    },
+    {
+        range: [0.224, 0.246],
+        left: '20%',
+        bottom: '3%',
+        css: 'walk'
+    },
+    {
+        range: [0.246, 0.248],
+        left: '20%',
+        bottom: '3%',
+        css: 'dog1'
+    },
+    {
+        range: [0.248, 0.26],
+        left: '20%',
+        bottom: '3%',
+        css: 'walk'
+    },
+    {
+        range: [0.26, 1],
+        left: '20%',
+        bottom: '3%',
+        css: 'finish'
     },
 ];

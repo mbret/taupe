@@ -3,34 +3,53 @@ var animations = [
         range: [0, 0.0017],
         name: 'animation 1',
         event: function(cb){
+            Sounds.playChosedSound(1, function(){
+                cb();
+            });
+        }
+    },
+    {
+        range: [0.0020, 0.0034],
+        name: 'animation 1',
+        event: function(cb){
             $(".anim1").removeClass("hide");
             $(".anim1").addClass("caca1");
             setTimeout(function(){
                 $(".anim1").addClass("hide");
-                console.log('callback animation 1');
-                cb();
-            }, 2000);
-        }
-    },
-    {
-        range: [0.0017, 0.0034],
-        name: 'test son',
-        event: function(cb){
-            $(".anim2").removeClass("hide");
-            $(".anim2").addClass("venere");
-            setTimeout(function(){
-                $(".anim2").addClass("ground-clean");
-                //Sounds.playChosedSound(2, function(){
-                    console.log('callback test son');
-                    $(".anim2").removeClass("ground-clean");
-                    $(".anim2").addClass("hide");
-                    $("#taupe").addClass("walk");
+                $(".anim2").removeClass("hide");
+                $(".anim2").addClass("venere");
+                setTimeout(function(){
+                    $(".anim2").addClass("ground-clean");
+                    Sounds.playChosedSound(2, function(){
+                        $(".anim2").removeClass("ground-clean");
+                        $(".anim2").addClass("hide");
+                        $("#taupe").addClass("walk");
 
-                    cb();
-                //});
-            }, 1000);
+                        cb();
+                    });
+                }, 3000);
+            }, 1800);
         }
     },
+    //{
+    //    range: [0.0017, 0.0034],
+    //    name: 'animation 2',
+    //    event: function(cb){
+    //        $(".anim2").removeClass("hide");
+    //        $(".anim2").addClass("venere");
+    //        setTimeout(function(){
+    //            $(".anim2").addClass("ground-clean");
+    //            //Sounds.playChosedSound(2, function(){
+    //                console.log('callback test son');
+    //                $(".anim2").removeClass("ground-clean");
+    //                $(".anim2").addClass("hide");
+    //                $("#taupe").addClass("walk");
+    //
+    //                cb();
+    //            //});
+    //        }, 3000);
+    //    }
+    //},
     {
         range: [0.047, 0.049],
         name: 'animation 3',
@@ -49,7 +68,7 @@ var animations = [
         }
     },
     {
-        range: [0.0795, 0.096],
+        range: [0.0811, 0.0828],
         name: 'animation 4',
         event: function(cb){
             $(".anim4").removeClass("hide");
@@ -57,11 +76,18 @@ var animations = [
             setTimeout(function(){
                 $(".anim4").addClass("hide");
                 $(".oiseauback").removeClass("hide");
+                $(".crottepig").removeClass("hide");
                 Sounds.playChosedSound(4, function(){
                     $(".oiseauback").addClass("hide");
 
                     cb();
                 });
+                setTimeout(function(){
+                    $(".crottepig").animate({ "top": "+=97%" }, "slow" );
+                },2000)
+                setTimeout(function(){
+                    $(".crottepig").addClass("hide");
+                },5000)
             }, 800);
         }
     },
@@ -78,6 +104,7 @@ var animations = [
                     $(".cheval").addClass("hide");
                     cb();
                 });
+                
             }, 800);
             
         }
@@ -87,7 +114,7 @@ var animations = [
         name: 'animation 6',
         event: function(cb){
             $(".piedchev").removeClass("hide");
-            $(".piedchev").animate({ "top": "+=90%" }, "slow" );
+            $(".piedchev").animate({ "top": "+=130%" }, "slow" );
             setTimeout(function(){
                 Sounds.playChosedSound(6, function(){
                     
@@ -130,7 +157,7 @@ var animations = [
         }
     },
     {
-        range: [0.187, 0.189],
+        range: [0.186, 0.187],
         name: 'animation 9',
         event: function(cb){
             $(".lapin2").removeClass("hide");
@@ -172,25 +199,49 @@ var animations = [
         }
     },
     {
-        range: [1000,1000],
-        name: 'animation 11',
+        range: [0.222, 0.224],
+        name: 'animation 10bis',
         event: function(cb){
-            $(".anim11").removeClass("hide");
-            $(".anim11").addClass("cacaTaupe");
-            setTimeout(function(){
-                $(".anim11").addClass("hide");
-                $(".crotteTaupe").removeClass("hide");
-
+            Sounds.playChosedSound(16, function(){
                 cb();
-            }, 2000);
+            });
         }
     },
     {
-        range: [1000,1000],
+        range: [0.246, 0.248],
         name: 'animation 11',
         event: function(cb){
-            $(".crotteTaupe").addClass("hide");
-            cb();
+            $(".dogscene").removeClass("hide");
+            $(".dogscene").animate({ "left": "-=69%" }, "slow" );
+            Sounds.playChosedSound(17, function(){
+                //$(".dogscene").animate({ "left": "+=69%" }, "slow" );
+                setTimeout(function(){
+                    Sounds.playChosedSound(18, function(){
+                        Sounds.playChosedSound(19, function(){
+                            $(".perso").addClass("hide");
+                            $(".crotteTaupe").removeClass("hide");
+                            $(".crotteTaupe").animate({ "top": "+=26%" }, "slow" );
+                            setTimeout(function(){
+                                $(".dogscene").animate({ "left": "+=69%" }, "slow" );
+                                $(".dogscene").addClass("hide");
+                                $(".perso").removeClass("hide");
+                                $(".crotteTaupe").addClass("hide");
+
+                                cb();
+                            }, 4000);
+                        });
+                    });
+                }, 2000);
+            });
+        }
+    },
+    {
+        range: [0.26, 1],
+        name: 'animation 12',
+        event: function(cb){
+            Sounds.playChosedSound(20, function(){
+
+            });
         }
     },
 ];

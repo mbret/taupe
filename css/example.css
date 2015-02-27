@@ -46,7 +46,6 @@ h1
   z-index: 1;
   width: 3000px;
 }
-
 .middle
 {
   z-index: 500;
@@ -97,7 +96,6 @@ h1
 .anim4{ left: 0;}
 .anim4{ left: 0;}
 
-
 .oiseaufront{ background: url('../images/animois.png') no-repeat -558px -7056px; width: 722px; height: 275px; left:51%; }
 .oiseauback{ background: url('../images/culois.png') no-repeat 0 -3784px; width: 533px; height: 221px; }
 .cheval {background: url('../images/chev.png') no-repeat 0 -2667px; width: 415px; height: 663px; top:-37%;}
@@ -108,18 +106,20 @@ h1
 .crottelap {background: url('../images/cacalap.png') no-repeat -908px -1505px; width: 24px; height: 37px; float: left;}
 .animation.tascrotte { left: 60%; top: 87%; }
 .flies { background: url('../images/flies.png') no-repeat 0 0; width: 403px; height: 382px; left: 100%; top: 47%; }
-.crotteTaupe{background: url('../images/cacaTaupe.png') no-repeat -808px -1893px; width: 45px; height: 30px;}
-.crottepig { background: url('../images/crotteois.png') no-repeat 0 0; width: 214px; height: 98px; left: 40%; top: -10%; }
+.crotteTaupe{background: url('../images/cacaTaupe.png') no-repeat -808px -1893px; width: 45px; height: 30px; left: 63%; top:-6%; }
+.crottepig { background: url('../images/crotteois.png') no-repeat 0 0; width: 214px; height: 98px; left: 40%; top: -17%; }
+.dogscene { background: url('../images/dog1.png') no-repeat 0 0; width: 1280px; height: 885px; left: 80%; top:4%; }
+
 
 
 
 .caca1{
-    border:1px solid red;
-  background: url('../images/crotte1.png') no-repeat top left; 
+    /*border:1px solid red;*/
+    background: url('../images/crotte1.png') no-repeat top left;
     width: 221px;
     height: 897px;
-  animation: playcrotte1 1.8s steps(9);
-  -webkit-animation: playcrotte1 1.8s steps(9);
+    animation: playcrotte1 1.8s steps(9);
+    -webkit-animation: playcrotte1 1.8s steps(9);
 }
 @keyframes playcrotte1 {
    100% { background-position: 0 -8153px; }
@@ -132,7 +132,6 @@ h1
   background: url('../images/cacaTaupe.png') no-repeat top left; width: 1280px; height: 895px;
   animation: playcacataupe .8s steps(4) ;
   -webkit-animation: playcacataupe .8s steps(4);
-
 }
 @keyframes playcacataupe {
    100% { background-position: 0 -8153px; }

@@ -2,7 +2,7 @@
     background: none;
 }
 .walk{
-    background: url('../images/walk.png') no-repeat top left;
+    background: url('../images/walk.png') no-repeat bottom left;
     width: 371px;
     height: 381px;
     animation: play 1.8s steps(4) infinite;
@@ -23,55 +23,55 @@
 /*2dn scene*/
 /*taupe is angry and looking at the sky*/
 .angry{
-    background: url('../images/taupeFaces/taup2.png') no-repeat;
+    background: url('../images/taupeFaces/taup2.png') no-repeat bottom left;
     width: 304px;
     height: 531px;
 }
 
 /*taupe get bird shit*/
 .bird-shit{
-    background: url('../images/taupeFaces/taup3.png') no-repeat;
+    background: url('../images/taupeFaces/taup3.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
 
 /*horse pointing finger*/
 .horse-finger{
-    background: url('../images/taupeFaces/taup4.png') no-repeat;
+    background: url('../images/taupeFaces/taup4.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
 
 /*horse pointing finger*/
 .horse-sit{
-    background: url('../images/taupeFaces/taup5.png') no-repeat;
+    background: url('../images/taupeFaces/taup5.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
 
 /*horse pointing finger*/
 .rabitt1{
-    background: url('../images/taupeFaces/taup6.png') no-repeat;
+    background: url('../images/taupeFaces/taup6.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
 
 /*horse pointing finger*/
 .rabitt2{
-    background: url('../images/taupeFaces/taup7.png') no-repeat;
+    background: url('../images/taupeFaces/taup7.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
 
 /*horse pointing finger*/
 .goat12{
-    background: url('../images/taupeFaces/taup81.png') no-repeat;
+    background: url('../images/taupeFaces/taup81.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
 /*horse pointing finger*/
 .goat1{
-    background: url('../images/taupeFaces/taup8.png') no-repeat;
+    background: url('../images/taupeFaces/taup8.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
     top: 50%;
@@ -79,7 +79,7 @@
 
 /*horse pointing finger*/
 .goat2{
-    background: url('../images/taupeFaces/taup9.png') no-repeat;
+    background: url('../images/taupeFaces/taup9.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
@@ -89,6 +89,7 @@
     background: url('../images/taupeFaces/taup14.png') no-repeat;
     width: 302px;
     height: 413px;
+
 }
 
 /*horse pointing finger*/
@@ -96,18 +97,19 @@
     background: url('../images/taupeFaces/taup15.png') no-repeat;
     width: 275px;
     height: 413px;
+
 }
 
 /*horse pointing finger*/
 .dog1{
-    background: url('../images/taupeFaces/taup11.png') no-repeat;
+    background: url('../images/taupeFaces/taup18.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
 
 /*horse pointing finger*/
 .finish{
-    background: url('../images/taupeFaces/taup11.png') no-repeat;
+    background: url('../images/taupeFaces/taup19.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
 }
