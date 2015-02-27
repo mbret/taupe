@@ -40,7 +40,7 @@ var moleBehavior = [
         bottom: '3%',
         css: 'walk'
     },
-    // mole get bird shit
+    
     {
         range: [0.0811, 0.0828],
         left: '50%',
@@ -127,7 +127,7 @@ var moleBehavior = [
         range: [0.186, 0.187],
         left: '10%',
         bottom: '3%',
-        css: 'goat12'
+        css: 'goat1'
     },
     // goat 12
     //{

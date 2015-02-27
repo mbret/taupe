@@ -152,7 +152,7 @@
                 "page": "8",
                 "texts": [
                     {
-                        "char": "L",
+                        "char": "LI",
                         "text": "Moi ? Mais non voyons ! Moi, je fais comme ca !"
                     },
                     {
@@ -343,7 +343,11 @@
 
         if( Sounds.deactive ){
             console.log('sound deactivated');
-            return mainCallback();
+            console.log('blabla');
+            setTimeout(function(){
+                return mainCallback();
+            }, 1000);
+            return;
         }
         
         for (var i = 0; i < obj.length; i++){

@@ -68,7 +68,7 @@ var animations = [
         }
     },
     {
-        range: [0.0795, 0.096],
+        range: [0.0811, 0.0828],
         name: 'animation 4',
         event: function(cb){
             $(".anim4").removeClass("hide");
@@ -76,11 +76,18 @@ var animations = [
             setTimeout(function(){
                 $(".anim4").addClass("hide");
                 $(".oiseauback").removeClass("hide");
+                $(".crottepig").removeClass("hide");
                 Sounds.playChosedSound(4, function(){
                     $(".oiseauback").addClass("hide");
 
                     cb();
                 });
+                setTimeout(function(){
+                    $(".crottepig").animate({ "top": "+=97%" }, "slow" );
+                },2000)
+                setTimeout(function(){
+                    $(".crottepig").addClass("hide");
+                },5000)
             }, 800);
         }
     },
@@ -92,85 +99,163 @@ var animations = [
             $(".anim5").addClass("chev");
             setTimeout(function(){
                 $(".anim5").addClass("hide");
+                $(".cheval").removeClass("hide");
                 Sounds.playChosedSound(5, function(){
                     $(".cheval").addClass("hide");
-
                     cb();
                 });
-            }, 1000);
+                
+            }, 800);
             
         }
     },
     {
-        range: [1000,1000],
+        range: [0.115, 0.116],
         name: 'animation 6',
         event: function(cb){
-            $(".anim6").removeClass("hide");
-            $(".anim6").addClass("");
+            $(".piedchev").removeClass("hide");
+            $(".piedchev").animate({ "top": "+=130%" }, "slow" );
             setTimeout(function(){
-                $(".anim6").addClass("hide");
-            }, 2000);
-            cb();
+                async.parallel([
+                    function(callback){
+                        Sounds.playChosedSound(6, function(){
+                            setTimeout(function(){
+                                $(".piedchev").animate({ "top": "-=90%" }, "slow" );
+                                callback();
+                            },1000)
+                        });
+                    },
+                    function(callback){
+                        $(".anim7").removeClass("hide");
+                        setTimeout(function(){
+                            $(".anim7").addClass("cacachev");
+                            setTimeout(function(){
+                                $(".anim7").addClass("hide");
+                                $(".crottechev").removeClass("hide");
+                                callback();
+                            },800);
+                        },5000);
+                    }
+                ], function(){
+                    cb();
+                });
+            }, 1000);
         }
     },
     {
-        range: [1000,1000],
+        range: [0.116, 0.126],
         name: 'animation 7',
         event: function(cb){
-            $(".anim7").removeClass("hide");
-            $(".anim7").addClass("");
-            setTimeout(function(){
-                $(".anim7").addClass("hide");
-            }, 2000);
-            cb();
+            $(".crottechev").addClass("hide");
+            cb();            
         }
     },
     {
-        range: [1000,1000],
+        range: [0.164, 0.166],
         name: 'animation 8',
         event: function(cb){
-            $(".anim8").removeClass("hide");
-            $(".anim8").addClass("");
-            setTimeout(function(){
-                $(".anim8").addClass("hide");
-            }, 2000);
-            cb();
+            $(".lapin").removeClass("hide");
+            $(".lapin").animate({ "left": "-=50%" }, "slow" );
+
+                Sounds.playChosedSound(7, function(){
+                    $(".lapin").animate({ "left": "+=50%" }, "slow", function(){$(".lapin").addClass("hide");} );
+                    cb();
+                });
         }
     },
     {
-        range: [1000,1000],
+        range: [0.186, 0.187],
         name: 'animation 9',
         event: function(cb){
-            $(".anim9").removeClass("hide");
-            $(".anim9").addClass("");
+            $(".lapin2").removeClass("hide");
+            $(".lapin2").animate({ "left": "-=50%" }, "slow" );
             setTimeout(function(){
-                $(".anim9").addClass("hide");
-            }, 2000);
-            cb();
+                async.parallel([
+                    function(callback){
+                        Sounds.playChosedSound(8, function(){
+                            setTimeout(function(){
+                                $(".lapin2").animate({ "left": "+=50%" }, "slow" );
+                                $(".tascrotte").addClass("hide");
+                                callback();
+                            },1000)
+                        });
+                    },
+                    function(callback){
+                        $(".anim9").removeClass("hide");
+                        setTimeout(function(){
+                            $(".anim9").addClass("cacalap");
+                            setTimeout(function(){
+                                $(".anim9").addClass("hide");
+                                $(".cacalap").addClass("hide");
+                                $(".tascrotte").removeClass("hide");
+                                callback();
+                            },6000);
+                        },2000);
+                    }
+                ], function(){
+                    cb();
+                });
+            }, 1000);
         }
     },
     {
-        range: [1000,1000],
+        range: [0.213, 0.215],
         name: 'animation 10',
         event: function(cb){
-            $(".anim10").removeClass("hide");
-            $(".anim10").addClass("");
+            $(".flies").removeClass("hide");
+            $(".flies").animate({ "left": "-=50%" }, "slow" );
             setTimeout(function(){
-                $(".anim10").addClass("hide");
+                Sounds.playChosedSound(15, function(){
+                    $(".flies").animate({ "left": "+=50%" }, "slow" );
+                    cb();
+                });
             }, 2000);
-            cb();
         }
     },
     {
-        range: [1000,1000],
+        range: [0.222, 0.224],
+        name: 'animation 10bis',
+        event: function(cb){
+            Sounds.playChosedSound(16, function(){
+                cb();
+            });
+        }
+    },
+    {
+        range: [0.246, 0.248],
         name: 'animation 11',
         event: function(cb){
-            $(".anim11").removeClass("hide");
-            $(".anim11").addClass("");
-            setTimeout(function(){
-                $(".anim11").addClass("hide");
-            }, 2000);
-            cb();
+            $(".dogscene").removeClass("hide");
+            $(".dogscene").animate({ "left": "-=69%" }, "slow" );
+            Sounds.playChosedSound(17, function(){
+                //$(".dogscene").animate({ "left": "+=69%" }, "slow" );
+                setTimeout(function(){
+                    Sounds.playChosedSound(18, function(){
+                        Sounds.playChosedSound(19, function(){
+                            $(".perso").addClass("hide");
+                            $(".crotteTaupe").removeClass("hide");
+                            $(".crotteTaupe").animate({ "top": "+=26%" }, "slow" );
+                            setTimeout(function(){
+                                $(".dogscene").animate({ "left": "+=69%" }, "slow" );
+                                $(".dogscene").addClass("hide");
+                                $(".perso").removeClass("hide");
+                                $(".crotteTaupe").addClass("hide");
+
+                                cb();
+                            }, 4000);
+                        });
+                    });
+                }, 2000);
+            });
+        }
+    },
+    {
+        range: [0.26, 1],
+        name: 'animation 12',
+        event: function(cb){
+            Sounds.playChosedSound(20, function(){
+
+            });
         }
     },
 ];

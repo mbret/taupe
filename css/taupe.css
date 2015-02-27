@@ -74,6 +74,7 @@
     background: url('../images/taupeFaces/taup8.png') no-repeat bottom left;
     width: 395px;
     height: 433px;
+    top: 50%;
 }
 
 /*horse pointing finger*/
@@ -85,16 +86,18 @@
 
 /*horse pointing finger*/
 .flies1{
-    background: url('../images/taupeFaces/taup14.png') no-repeat bottom left;
-    width: 395px;
-    height: 433px;
+    background: url('../images/taupeFaces/taup14.png') no-repeat;
+    width: 302px;
+    height: 413px;
+
 }
 
 /*horse pointing finger*/
 .flies2{
-    background: url('../images/taupeFaces/taup15.png') no-repeat bottom left;
-    width: 395px;
-    height: 433px;
+    background: url('../images/taupeFaces/taup15.png') no-repeat;
+    width: 275px;
+    height: 413px;
+
 }
 
 /*horse pointing finger*/
